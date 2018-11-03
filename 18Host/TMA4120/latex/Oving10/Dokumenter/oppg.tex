@@ -47,12 +47,47 @@
 
 \subsection*{3}
 
+
+\begin{gather*}
+	\oint_C{\frac{e^{-z}}{z^n} dz} = 2 \pi i (e^{-z})^{(n - 1)} (0) = 2 \pi i (-1)^{n - 1} e^{-0} = 2 \pi i (-1)^{n - 1}
+\end{gather*}
+
+
 \subsection*{16}
+
+
+\begin{gather*}
+	\oint_C{\frac{e^{4z}}{z(z - 2i)^2} dz} = \evalat{\left(\frac{e^{4z}}{z}\right)'}{2 i} = \evalat{\frac{4 z e^{4 z} - e^{4 z}}{z^2}}{2 i}
+	=
+	\\
+	\frac{8 ie^{8 i} - e^{8 i}}{-4} = \frac{1 - 8 i}{4} e^{8 i}
+\end{gather*}
 
 
 \section*{15.1}
 
 \subsection*{18}
 
+
+\begin{gather*}
+	a_n = n^2 \left(\frac{i}{4}\right)^n,
+	\qquad
+	\abs{\frac{a_{n + 1}}{a_n}} = \frac{(n + 1)^2}{4 n^2}
+	\\
+	\lim_{n \rightarrow \infty}{\frac{(n + 1)^2}{4 n^2}} = \frac{1}{4} < \infty \Rightarrow \text{Series is convergent}
+\end{gather*}
+
+
 \subsection*{19}
+
+
+\begin{gather*}
+	a_n = \frac{i^n}{n^2 - i},
+	\qquad
+	\lim_{n \rightarrow \infty}{\abs{\frac{a_{n + 1}}{a_n}}} = \lim_{n \rightarrow \infty}{\abs{\frac{n^2 - i}{(n + 1)^2 - i}}}
+	=
+	1 < \infty
+	\\
+	\text{Series is convergent}
+\end{gather*}
 
