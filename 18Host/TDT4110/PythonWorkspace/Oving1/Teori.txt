@@ -1,0 +1,17 @@
+a)
+Alan Turing er kjent som faren av moderne datateknologi.
+Hannes største achievment er crackingen av enigma-maskinen
+som tyskerene brukte under andre verdenskrig som kryptert komunikasjon
+som vist i filmen "the imitation game"
+
+b)
+Mindre kretskort som grafikkort og netverkskort kalles ofte generelt utvidelseskort eller datterkort
+og kobles ofte gjennom portstandarden pci-e
+
+c)
+Central Processing Unit
+
+d)
+Random betyr at en kan lese og skrive til vilkårlige posisjoner i minne,
+kontra til seriell access hvor en må lese (og skrive) store blokker med påfølgende (sereellt) minne.
+

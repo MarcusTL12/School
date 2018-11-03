@@ -1,0 +1,194 @@
+\documentclass{article}
+\usepackage[margin=1.3in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{esint}
+\usepackage{harpoon}
+\usepackage{mathtools}
+
+\setlength{\parindent}{0pt}
+
+\newcommand{\partDiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\paranth}[1]{\left( #1 \right)}
+\newcommand{\bracket}[1]{\left[ #1 \right]}
+\newcommand{\laplace}[1]{\mathcal{L}\paranth{#1}}
+
+\begin{document}
+
+\begin{center}
+    \LARGE{\textbf{Øving 1}}
+\end{center}
+
+\section*{\textbf{6.1}}
+
+\subsection*{4)}
+
+\begin{gather*}
+    \laplace{\cos^2{\omega t}} =
+    \laplace{\frac{1}{2}\paranth{1 + \cos{2\omega t}}} =
+    \frac{1}{2 s} + \frac{\omega}{s^2 + 4\omega^2}
+\end{gather*}
+
+
+\subsection*{13)}
+
+\begin{gather*}
+    f(t) = \left\{ \begin{matrix*}[l]
+        1   & x < 1     \\
+        -1  & 1 < x < 2 \\
+        0   & x > 2
+    \end{matrix*} \right.
+    = \\ \\
+    1 - 2 u\paranth{t - 1} + u\paranth{t - 2} => \\ \\
+    \laplace{f}\paranth{s} = \frac{1}{s} \paranth{1 - 2 e^{-s} + e^{-2 s}}
+\end{gather*}
+
+
+\subsection*{26)}
+
+\begin{gather*}
+	\laplace{f} \paranth{s} =
+	\frac{5 s + 1}{s^2 - 25} =
+	\frac{5 s + 1}{\paranth{s - 5}\paranth{s + 5}} =
+	\frac{A}{s - 5} + \frac{B}{s + 5} \\ \\
+	A = 2.6, B = -2.4 =>
+	\laplace{f} \paranth{s} =
+	\frac{2.6}{s - 5} - \frac{2.4}{s + 5} => \\ \\
+	f\paranth{t} = 2.6 e^{5 t} - 2.4 e^{-5 t}
+\end{gather*}
+
+
+\subsection*{32)}
+
+\begin{gather*}
+	\laplace{f} \paranth{s} =
+	\frac{1}{\paranth{s + a} \paranth{s + b}} =
+	-\frac{1}{\paranth{b - a} \paranth{s + a}} - \frac{1}{\paranth{a - b} \paranth{s + b}} => \\ \\
+	f\paranth{t} =
+	-\frac{e^{a t}}{b - a}
+	-\frac{e^{b t}}{a - b}
+\end{gather*}
+
+
+\subsection*{40)}
+
+\begin{gather*}
+	\laplace{f} (s) =
+	\frac{1}{s^2 - 2 s - 3} =
+	\frac{1}{\paranth{s - 3} \paranth{s + 1}} =
+	\frac{1}{4 \paranth{s - 3}} - \frac{1}{4 \paranth{s + 1}} => \\ \\
+	f (t) =
+	\frac{e^{-3 t}}{4} - \frac{e^t}{4}
+\end{gather*}
+
+
+\section*{\textbf{6.2}}
+
+\subsection*{5)}
+
+\begin{gather*}
+	y'' - \frac{1}{4} y = 0, \quad
+	y(0) = 0, \quad
+	y'(0) = 1 \\
+	Y = \laplace{y} \\ \\
+	s^2 Y - s - \frac{1}{4} Y = 0 \\
+	Y \paranth{s^2 - \frac{1}{4}} = s \\
+	Y = \frac{s}{s^2 - \frac{1}{4}} =
+	\frac{s}{\paranth{s - \frac{1}{2}} \paranth{s + \frac{1}{2}}} =
+	\frac{\frac{1}{2}}{s - \frac{1}{2}} + \frac{\frac{1}{2}}{s + \frac{1}{2}} => \\ \\
+	y(t) = \frac{1}{2} \paranth{e^{-\frac{t}{2}} + e^{\frac{t}{2}}}
+\end{gather*}
+
+
+\subsection*{10)}
+
+\begin{gather*}
+	y'' + 0.04 y = 0.02 t^2, \quad
+	y(0) = - 25, \quad
+	y'(0) = 0 \\
+	Y = \laplace{y} \\ \\
+	s^2 Y + 25 + 0.04 Y = \frac{0.04}{s^3} \\
+	Y \paranth{s^2 + 0.04} = \frac{0.04}{s^3} - 25 \\
+	Y = \frac{0.04}{s^3 \paranth{s^2 + 0.04}} - \frac{25}{s^2 + 0.04} \\ \\
+	\frac{0.04}{s^3 \paranth{s^2 + 0.04}} = \frac{1}{s^3} - \frac{25}{s} + \frac{25}{s^2 + 0.04} \\
+	Y = \frac{1}{s^3} - \frac{25}{s} + \frac{25}{s^2 + 0.04} - \frac{25}{s^2 + 0.04} = \frac{1}{s^3} - \frac{25}{s} \\
+	y(t) = \frac{1}{2} t^2 - 25
+\end{gather*}
+
+\newpage
+
+
+\subsection*{26)}
+
+\begin{gather*}
+	\laplace{f(t)}(s) = F(s)	=
+	\frac{1}{s^4 - s^2}	=
+	\frac{1}{s^2}	\cdot	\frac{1}{s^2 - 1} =
+	\frac{1}{s^2}	\cdot	G(s) \\ \\
+	G(s) = \frac{1}{s^2 - 1} =
+	\frac{1}{\paranth{s - 1} \paranth{s + 1}} =
+	\frac{1}{2 \paranth{s - 1}} - \frac{1}{2 \paranth{s + 1}} => \\ \\
+	g(t) = \frac{e^{t}}{2} - \frac{e^{-t}}{2} = \sinh{t} \\ \\
+	f(t) = \int_0^t{\int_0^t{\sinh{t} dt^2}} =
+	\int_0^t{\paranth{\cosh{t} - 1} dt} =
+	\sinh{t} - t
+\end{gather*}
+
+
+\section*{\textbf{6.3}}
+
+\subsection*{21)}
+
+\begin{gather*}
+	y'' + 4y =
+	g(t) =
+	\left\{\begin{matrix*}[l]
+		4 \cos{t}	& 0 < t < \pi \\
+		0			& \pi < t
+	\end{matrix*}\right. =
+	4 \paranth{1 - u(t - \pi)} \cos{t} \\ \\
+	g(t) = 4 \paranth{1 - u(t - \pi)} \cos{t} =
+	4 \cos{t} - 4 \cos{(t)} u(t - \pi) = \\
+	4 \cos{t} + 4 \cos{(t - \pi)} u(t - \pi) \\ \\
+	\laplace{g(t)}(s) = \frac{4 s}{s^2 + 1} + e^{-\pi s} \frac{4 s}{s^2 + 1} =
+	\paranth{1 + e^{-\pi s}} \frac{4 s}{s^2 + 1} \\
+	\laplace{y} = Y \\ \\
+	s^2 Y - s - \frac{8}{3} + 4 Y = \paranth{1 + e^{-\pi s}} \frac{4 s}{s^2 + 1} \\
+	Y \paranth{s^2 + 4} = \paranth{1 + e^{-\pi s}} \frac{4 s}{s^2 + 1} + s + \frac{8}{3} \\
+	Y = \paranth{1 + e^{-\pi s}} \frac{4 s}{\paranth{s^2 + 1} \paranth{s^2 + 4}} +
+	\frac{s}{s^2 + 4} + \frac{8}{3 \paranth{s^2 + 4}} = \\
+	\frac{4}{3} \paranth{1 + e^{- \pi s}} \paranth{\frac{s}{s^2 + 4} - \frac{s}{s^2 + 1}} +
+	\frac{s}{s^2 + 4} + \frac{8}{3 \paranth{s^2 + 4}} = \\
+	\frac{4}{3} \paranth{\frac{s}{s^2 + 4} - \frac{s}{s^2 + 1} +
+	e^{- \pi s} \paranth{\frac{s}{s^2 + 4} - \frac{s}{s^2 + 1}}} +
+	\frac{s}{s^2 + 4} + \frac{8}{3 \paranth{s^2 + 4}} = \\
+	\frac{7 s}{3 \paranth{s^2 + 4}} + \frac{8}{3 \paranth{s^2 + 4}} -
+	\frac{4 s}{3 \paranth{s^2 + 1}} +
+	\frac{4}{3} e^{- \pi s} \paranth{\frac{s}{s^2 + 4} - \frac{s}{s^2 + 1}} \\ \\
+	y = \frac{7}{3} \cos{2 t} + \frac{4}{3} \sin{2 t} - \frac{4}{3} \cos{t} +
+	\frac{4}{3} u(t - \pi) \paranth{cos{2t} + cos{t}}
+\end{gather*}
+
+\newpage
+
+
+\subsection*{38)}
+
+\begin{gather*}
+	R = 4 \Omega, \quad L = 1 H, \quad C = 0.05 F, v(t) = \left\{\begin{matrix*}[l]
+		34 e^{-t}	& 0 < t < 4 \\
+		0			& 4 < t
+	\end{matrix*}\right. \\
+	i'(t) + 4 i(t) + 20 \int_0^t{i(\tau) d\tau} = v(t) \\
+	\laplace{i(t)}(s) = I(s) \\ \\
+	sI + 4I + \frac{20}{s} I = \paranth{1 - e^{-4} e^{-4 s}} \frac{34}{s + 1} \\
+	\paranth{s^2 + 4s + 20} I = \paranth{1 - e^{-4} e^{-4 s}} \frac{34 s}{s + 1} \\
+	I = \paranth{1 - e^{-4} e^{-4 s}} \frac{34 s}{(s + 1) \paranth{s^2 + 4 s + 20}} =
+	\paranth{1 - e^{-4} e^{-4 s}} \paranth{\frac{2 s + 40}{s^2 + 4 s + 20} + \frac{2}{s + 1}} \\ \\
+	i(t) = 2 e^{-2 t} \cos{4 t} + 9 e^{-2 t} \sin{4 t} + 2 e^{-t} \\
+	- u(t - 4) e^{-4} \paranth{2 e^{-2 (t - 4)} \cos{4 (t - 4)} + 9 e^{-2 (t - 4)} \sin{4 (t - 4)} + 2 e^{-(t - 4)}}
+\end{gather*}
+
+\end{document}

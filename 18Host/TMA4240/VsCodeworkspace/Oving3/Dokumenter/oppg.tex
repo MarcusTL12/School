@@ -1,0 +1,179 @@
+\begin{center}
+	\LARGE{\textbf{Innlevering 3}}
+\end{center}
+
+
+\section*{Oppgave 1}
+
+
+\subsection*{a)}
+
+
+Disse vil være binomisk fordelt da hver består av 5 uavhengige bernoulli forsøk med fast sannsynelighet for suksess (mål). Fordelingsfunksjoner blir da:
+
+\begin{gather*}
+	f_T(x) = P(X_T = x) = \binom{5}{x} \cdot 0.80^x \cdot 0.20^{5 - x}
+	\qquad
+	f_F(x) = P(X_F = x) = \binom{5}{x} \cdot 0.70^x \cdot 0.30^{5 - x}
+	\\
+	\\
+	P(X_T = 5 \cap X_F = 5) = f_T(5) \cdot f_F(5) = 0.8^5 \cdot 0.7^5 = 0.0551
+	\\
+	f_T(3) \cdot f_F(3) = \binom{5}{3} \cdot 0.80^3 \cdot 0.20^{2} \cdot
+	\binom{5}{3} \cdot 0.70^3 \cdot 0.30^{2} = 0.0632
+	\\
+	\\
+	P(L_1) = \sum_{i = 0}^5{f_T(i) \cdot f_F(i)} = 0.2728
+\end{gather*}
+
+
+\subsection*{b)}
+
+La hendelsene $T_i$ og $F_i$ henholdsvis betegne at Tyskland og Frankrike scorer i runde $i$ og $P(T_i) = 0.8,\ P(F_i) = 0.7$ som definert i begynnelsen av oppgaven.
+
+\begin{gather*}
+	V_1 = (T_1 \cap \bar F_1) \cup (\bar T_1 \cap F_1)
+	\\
+	P(V_1) = P(T_1) \cdot (1 - P(F_1)) + (1 - P(T_1)) \cdot P(F_1)
+	=
+	\\
+	0.8 \cdot 0.3 + 0.2 \cdot 0.7 = 0.38
+	\\
+	\\
+	V_T = T_i \cap \bar F_i, \quad
+	P(V_T | V_1) = \frac{P(V_T \cap V_1)}{P(V_1)}
+	\\
+	\frac{P(V_T \cap V_1)}{P(V_1)} = \frac{P(V_T)}{P(V_1)} = \frac{0.8 \cdot 0.3}{0.38} = 0.632
+\end{gather*}
+
+
+\subsection*{c)}
+
+
+X vil være geometrisk fordelt da dette er fordelingen til antall forsøk før første suksess av en rekke uavhengige bernoulli forsøk. $p$ i forsøket blir sannsyneligheten for at vi får en vinner i et vilkårlig forsøk som i b) ble regnet ut til 0.38. Da har vi fra fordelingen:
+
+\begin{gather*}
+	E(X) = \frac{1}{p} = \frac{1}{0.38} = 2.63
+	\\
+	Var(X) = \frac{1 - p}{p^2} = \frac{1 - 0.38}{0.38^2} = 4.29
+\end{gather*}
+
+
+
+\section*{Oppgave 2}
+
+
+\subsection*{a)}
+
+
+\begin{gather*}
+	P(X \geq 1) = 1 - P(X \leq 0) = 1 - f(0) = 1 - e^{-7} = 0.9991
+	\\
+	\\
+	P(X \leq 2 | X \geq 1) = \frac{P(X \leq 2 \cap X \geq 1)}{P(X \geq 1)}
+	=
+	\frac{P(X \leq 2) - P(X \leq 0)}{P(X \geq 1)}
+	=
+	\\
+	\frac{f(0) + f(1) + f(2) - f(0)}{0.9991} = \frac{\frac{7^1}{1!} e^{-7} + \frac{7^2}{2!} e^{-7}}{0.9991} = 0.0288
+\end{gather*}
+
+
+\subsection*{b)}
+
+
+\begin{gather*}
+	\mu_{tot} = 0.5 \cdot 5 + 0.25 \cdot 15 + 0.25 \cdot 20 = 11.25
+	\\
+	f(x) = p(x; 11.25) = \frac{11.25^x}{x!} e^{-11.25}
+\end{gather*}
+
+
+\section*{Oppgave 3}
+
+
+\begin{gather*}
+	\text{X vil være hypergeometrisk fordelt da det ikke ville innfalt to kontroller på samme transporten}
+	\\
+	f(x) = P(X = x) = \frac{\binom{5}{x} \binom{995}{5 - x}}{\binom{1000}{5}}
+	\\
+	\text{Høyest: } f(0) = \frac{\binom{995}{5}}{\binom{1000}{5}} = 0.975
+	\\
+	\text{Alle testene positiv: }
+	f(5) = \frac{1}{\binom{1000}{5}} = 1.212 \cdot 10^{-13}
+\end{gather*}
+
+
+\section*{Oppgave 4}
+
+
+\begin{gather*}
+	Z = \frac{x - 6.8}{0.060}
+	P(X < 6.74)	= P(Z < 1) = 0.1587
+	\\
+	P(6.74 < X < 6.86) = 1 - 2 \cdot 0.1587 = 0.6826 \quad \text{pga. symetri}
+	\\
+	P(|X - \mu| > 0.06) = 1 - P(6.74 < X < 6.86) = 0.3174
+\end{gather*}
+
+
+\newpage
+
+
+\section*{Oppgave 5}
+
+
+\begin{gather*}
+	Z = \frac{Y - 500}{80}
+	\\
+	P(Y > 550) = P(Z > 0.625) = 1 - 0.7357 = 0.2643
+	\\
+	\\
+	X = Y_1 - Y_2
+	\\
+	E(X) = E(Y_1) - E(Y_2) = 0
+	\\
+	Var(X) = Var(Y_1) + Var(Y_1) = 2 \cdot 80^2 = 12800
+	\\
+	\sigma_X = \sqrt{12800} = \sqrt{2} \cdot 80 = 113.14
+	\\
+	Z = \frac{X}{113.14}
+	\\
+	P(|X| > 80) = 1 - P(-80 < X < 80) = P(-0.71 < Z < 0.71) =
+	\\
+	P(Z < 0.71) - P(Z < -0.71) = 0.7611 - 0.2389 = 0.5222
+\end{gather*}
+
+
+\section*{Oppgave 6}
+
+
+\subsection*{a)}
+
+
+\begin{gather*}
+	P(Z > 10) = 1 - P(Z < 10) = 1 - \left(
+		1 - e^{-0.05 \cdot 10}
+	\right)
+	=
+	0.6065
+\end{gather*}
+
+Hendelsene er per definisjon uavhengige så sannsyneligheten for å finne en feil på de neste x kilometrene er uavhengig av hvor lenge det er siden den forrige. Sannsyneligheten vil derfor være lik.
+
+
+\subsection*{b)}
+
+
+\begin{gather*}
+	P(M = m) = P(m < Z < m + 1) = F(m + 1) - F(m) =
+	\\
+	1 - e^{-\lambda (m + 1)} - \left(
+		1 - e^{-\lambda m}
+	\right) =
+	e^{-\lambda m} - e^{-\lambda m} e^{-\lambda} =
+	\\
+	\left(
+		1 - e^{-\lambda}
+	\right) e^{-\lambda m}
+\end{gather*}

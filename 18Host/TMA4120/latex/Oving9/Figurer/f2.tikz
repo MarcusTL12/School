@@ -1,0 +1,35 @@
+% This file was created by matplotlib2tikz v0.6.18.
+\begin{tikzpicture}
+
+\begin{axis}[
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+title={z plane},
+width=\figurewidth,
+x grid style={white!69.01960784313725!black},
+xlabel={Re z},
+xmajorgrids,
+xmin=-0.75, xmax=0.75,
+y grid style={white!69.01960784313725!black},
+ylabel={Im z},
+ymajorgrids,
+ymin=-0.75, ymax=0.75
+]
+\path [draw=black, fill=white!49.80392156862745!black] (axis cs:0.5,0)
+--(axis cs:0.497592363336098,-0.0490085701647803)
+--(axis cs:0.490392640201615,-0.097545161008064)
+--(axis cs:0.478470167866104,-0.145142338627231)
+--(axis cs:0.461939766255643,-0.191341716182545)
+--(axis cs:0.461939766255643,-0.191341716182545)
+--(axis cs:0,0)
+--(axis cs:0.461939766255643,0.191341716182545)
+--(axis cs:0.478470167866103,0.145142338627235)
+--(axis cs:0.490392640201614,0.0975451610080678)
+--(axis cs:0.497592363336098,0.0490085701647842)
+--(axis cs:0.5,4.1192675685653e-15)
+--(axis cs:0.5,0);
+
+\end{axis}
+
+\end{tikzpicture}

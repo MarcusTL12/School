@@ -1,0 +1,31 @@
+% This file was created by matplotlib2tikz v0.6.18.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+width=\figurewidth,
+x grid style={white!69.01960784313725!black},
+xmin=0.55, xmax=10.45,
+y grid style={white!69.01960784313725!black},
+ymin=0.413086819130536, ymax=1.0022112423138
+]
+\addplot [semithick, color0, forget plot]
+table [row sep=\\]{%
+1	0.709745988208521 \\
+2	0.767640091010626 \\
+3	0.79040944595084 \\
+4	0.634239379382901 \\
+5	0.771360617954608 \\
+6	0.439865202002502 \\
+7	0.975432859441835 \\
+8	0.930452073821688 \\
+9	0.612474057386373 \\
+10	0.934127261332603 \\
+};
+\end{axis}
+
+\end{tikzpicture}

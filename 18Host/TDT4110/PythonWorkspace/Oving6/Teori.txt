@@ -1,0 +1,23 @@
+a)
+Applkasjonslaget
+
+b)
+Paritet går gjennom alle bits i dataen og finner ut om det er et partall eller oddetall antall 1-er bits
+i meldingen. Dette kan brukes til å skjekke om en 1-bits error har forekomt da pariteten vil bli ødelagt.
+
+c)
+Packet switching funker med å dele meldingen opp i små datapakker som sended seperat og settes sammen ved mottagelse.
+Circuit switching funker med å sette opp en direkte datakobling mellom datapunkter som sender sammenhengende datastrømmer.
+
+d)
+Routeren router pakker gjennom nettverket til rett mottaker basert på ip.
+
+e)
+Nettverkprotokollen er standarden for instruksjoner som brukes til å sende data gjennom et nettverk
+
+f)
+(Fysisk lag)
+Applikasjonslag
+Transport
+Internet
+Link

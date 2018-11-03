@@ -1,0 +1,26 @@
+a)
+Fetch instruction
+Decode instruction
+Fetch data
+process data
+return data
+
+b)
+Steg 3 der du fetcher data
+
+c)
+programtelleren er en peker til hvor i programmet du er. Dette er posisjonen Fetch instruction henter fra.
+
+d)
+mellom 1 og 4 GHz. Spesielle mikrokontrollere kan ha lavere og dyre entusiast chipper kan overklokkes til 5-7 GHz.
+
+e)
+Solid State Drive
+
+f)
+En SSD lagrer verdiene i elektroniske NAND-flash enheter som funker som permanent RAM, hvor du har tilfeldig access men ikke volatilt minne.
+En HDD/harddisk drive lagrer data på en magnetisk disk ved å flippe mikromagnetpoler på overflaten som kan leses som en eller null.
+Siden disken spinner og den må flytte et fysisk lesehode for å skrive og lese data må dette gjøres sekvensielt for å ha noe fornuftig hastighet.
+
+g)
+En ALU(Arithmetic/Logic unit) gjør arithmetiske og logiske operasjoner i hardware og er den mest essensielle komponenten av CPU-en for å gjøre operasjoner på data.

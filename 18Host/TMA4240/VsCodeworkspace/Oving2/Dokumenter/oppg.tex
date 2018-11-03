@@ -1,0 +1,252 @@
+\begin{center}
+	\LARGE{\textbf{Innlevering 2}}
+\end{center}
+
+
+\section*{Oppgave 1}
+
+\subsection*{a)}
+
+\begin{gather*}
+	f(x) = \frac{d}{dx} F(x) = \frac{d}{dx} \left(
+		1 - e^{-\frac{x^2}{2 \alpha}}
+	\right)
+	=
+	\frac{x}{\alpha} e^{-\frac{x^2}{2 \alpha}}
+	\\
+	\\
+	x_{max} = \left\{\left.
+		x \in (0, \infty) \right. \left|
+		\frac{d}{dx} f(x) = 0
+	\right.\right\}
+	\\
+	\\
+	\frac{d}{dx} \left(\frac{x}{\alpha} e^{-\frac{x^2}{2 \alpha}}\right)
+	=
+	\frac{1}{\alpha} e^{-\frac{x^2}{2 \alpha}} - \frac{x^2}{\alpha^2} e^{-\frac{x^2}{2 \alpha}} = 0
+	\\
+	-\frac{1}{\alpha^2} \left(x^2 - \alpha\right) = 0 \Rightarrow x = \sqrt{\alpha}
+	\\
+	\\
+	\\
+	\plot{Figurer/f1.tikz}{15}{12}
+\end{gather*}
+
+
+\newpage
+
+
+\subsection*{b)}
+
+\plot{Figurer/f2.tikz}{6}{6}
+
+\begin{gather*}
+	P\left(A\cap (B \cup C) \right) = P(A) \cdot (P(B) + P(C) - P(B) \cdot P(C))
+	\\
+	\\
+	P(A) = P(B) = P(C) = 1 - F(2) \qquad
+	F(2) = 1 - e^{-2}
+	\\
+	P\left(A\cap (B \cup C) \right) = e^{-2} \left(e^{-2} + e^{-2} - \left(e^{-2}\right)^2 \right) =
+	2 e^{-4} - e^{-6} = 0.0342
+\end{gather*}
+
+\vfill
+
+\section*{Oppgave 2}
+
+\begin{minipage}{0.5\textwidth}
+	\plot{Figurer/f3.tikz}{7.5}{6}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.5\textwidth}
+	\begin{gather*}
+		F(x) = \int_0^x{f(y) dy}
+		=
+		\left\{
+			\begin{matrix*}[l]
+				\frac{1}{\theta} x	& 0 < x < \theta \\ \\
+				1					& x > \theta
+			\end{matrix*}
+		\right.
+		\\
+		P(X \leq 0.4) = F(0.4) = \frac{0.4}{2} = 0.2
+	\end{gather*}
+\end{minipage}%
+
+\newpage
+
+\section*{Oppgave 3}
+
+\begin{gather*}
+	P(X \geq 0) = \sum_{x = 0}^2{f(x)} = 0.5 + 0.2 + 0.1 = 0.8
+	\\
+	\\
+	P(X \geq 0 | X \leq 1) = \frac{P(X \geq 0 \cup X \leq 1)}{P(X \leq 1)}
+	=
+	\\
+	\frac{P(0 \leq X \leq 1)}{P(X \leq 1)} = \frac{\sum_{x = 0}^1{f(x)}}{\sum_{x = -2}^1{f(x)}}
+	=
+	\\
+	\frac{0.5 + 0.2}{0.1 + 0.1 + 0.5 + 0.2} = \frac{0.7}{0.9} = \frac{7}{9} = 0.778
+	\\
+	\\
+	E(X) = \sum_{x = -2}^2{x f(x)} =
+	\\
+	-2 \cdot 0.1 - 1 \cdot 0.1 + 0 \cdot 0.5 + 1 \cdot 0.2 + 2 \cdot 0.1
+	= 0.1
+\end{gather*}
+
+
+\section*{Oppgave 4}
+
+\begin{gather*}
+	g(x) = \sum_{y = 0}^2{f(x, y)}
+	\qquad
+	h(x) = \sum_{x = -1}^1{f(x, y)}
+	\\
+	\begin{tabular}{| c | c | c | c | c |}
+		\hline
+				& y = 0			& y = 1				& y = 2				& g(x)			\\
+		\hline
+		&&&&\\
+		x = -1	& $\frac{1}{6}$	& $\frac{1}{12}$	& $\frac{1}{12}$	& $\frac{1}{3}$	\\
+		&&&&\\
+		\hline
+		&&&&\\
+		x = 0	& $\frac{1}{12}$	& $\frac{1}{6}$	& $\frac{1}{12}$	& $\frac{1}{3}$	\\
+		&&&&\\
+		\hline
+		&&&&\\
+		x = 1	& $\frac{1}{12}$	& $\frac{1}{12}$	& $\frac{1}{6}$	& $\frac{1}{3}$	\\
+		&&&&\\
+		\hline
+		&&&&\\
+		h(y)	& $\frac{1}{3}$		& $\frac{1}{3}$		& $\frac{1}{3}$	&				\\
+		&&&&\\
+		\hline
+	\end{tabular}
+	\\
+	\\
+	\text{Cov}(X, Y) = E(X Y) - E(X) E(Y)
+	\\
+	E(X) = -1 \cdot \frac{1}{3} + 0 \cdot \frac{1}{3} + 1 \cdot \frac{1}{3} = 0
+	\qquad
+	E(Y) = 0 \cdot \frac{1}{3} + 1 \cdot \frac{1}{3} + 2 \cdot \frac{1}{3} = 1
+	\\
+	Var(Y) = Var(X) = E(X^2) - E(X)^2 = (-1)^2 \cdot \frac{1}{3} + 0 + 1 \cdot \frac{1}{3} - 0 = \frac{2}{9}
+	\\
+	E(X Y) = -1 \cdot 1 \cdot \frac{1}{12} - 1 \cdot 2 \cdot \frac{1}{12} + 1 \cdot 1 \cdot \frac{1}{12} + 1 \cdot 2 \cdot \frac{1}{6} = \frac{1}{6}
+	\\
+	\text{Cov}(X, Y) = \frac{1}{6} - 0 \cdot 1 = \frac{1}{6} \neq 0 \Rightarrow \text{X og Y ikke uavhengig}
+\end{gather*}
+
+
+\newpage
+
+
+\section*{Oppgave 5}
+
+
+\subsection*{a)}
+
+
+\begin{gather*}
+	P(A) = P((A \cap B) \cup (A \cap B^c)) = P(A \cap B) + P(A \cap B^c) = 0.05 + 0.15 = 0.200
+	\\
+	\\
+	P(B) = 0.1 + 0.05 = 0.15
+	\\
+	P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{0.05}{0.15} = \frac{1}{3} = 0.333
+	\\
+	P(A | B^c) = \frac{P(A \cap B^c)}{P(B^c)} = \frac{0.15}{1 - 0.15} = \frac{3}{17} = 0.176
+	\\
+	\\
+	P(A | B) = 0.33 \neq 0.20 \Rightarrow \text{A og B ikke uavhengige}
+\end{gather*}
+
+
+\subsection*{b)}
+
+
+\begin{gather*}
+	E(R_1) = 0.8 \cdot (-100) + 0.2 \cdot 400 = 0
+	\\
+	\\
+	E(R_1 | B) = P(A | B) \cdot 1000 + P(A^c | B) \cdot (-100)
+	=
+	\frac{1}{3} \cdot 1000 + \frac{2}{3} \cdot (-100) = 66.7\ \text{millioner}
+	\\
+	\\
+	E(R_1 | B^c) = \frac{3}{17} \cdot 400 + \frac{14}{17} \cdot (-100) = -11.76
+	\\
+	\\
+	P(B | A) = \frac{P(B \cup A)}{P(A)} = \frac{0.05}{0.2} = \frac{1}{4}
+	\\
+	P(B | A^c) = \frac{P(B \cup A^c)}{P(A^c)} = \frac{0.1}{0.8} = \frac{1}{8}
+	\\
+	\\
+	E(R_2 | A) = \frac{1}{4} \cdot 1000 + \frac{3}{4} \cdot (-100) = 175
+	\\
+	E(R_2 | A^c) = \frac{1}{8} \cdot 1000 + \frac{7}{8} \cdot (-100) = 37.5
+	\\
+	\\
+	E(R_1, R_2) = E(R_1) + P(A) \cdot \text{max}(0, E(R_2 | A)) + P(A^c) \cdot \text{max}(0, E(R_2 | A^c))
+	=
+	\\
+	0 + 0.2 \cdot 175 + 0.8 \cdot 37.5 = 65
+	\\
+	\\
+	E(R_2, R_1) = 65 + 0.15 \cdot 66.7 + 0.85 \cdot 0 = 75
+	\\
+	\\
+	\text{Altså er letestrategien der det først letes i felt 2}
+	\\
+	\text{og så i felt 1 dersom det var olje i felt 2}
+	\\
+	\text{Dette vil gi en forventet fortjeneste på 75 millioner}
+\end{gather*}
+
+
+\section*{Oppgave 6}
+
+
+\begin{gather*}
+	F(y) = P(Y \leq y) = 1 - P(Y \geq y) = 1 - \left(\frac{k}{y}\right)^\theta
+	\\
+	f(y) = \frac{d}{dy} F(y) = \frac{d}{dy} \left(
+		1 - \frac{k^\theta}{y^\theta}
+	\right)
+	=
+	\frac{\theta k^\theta}{y^{\theta + 1}}
+	\\
+	\\
+	E(Y) = \int_{k}^\infty{y f(y) dy}
+	=
+	\int_{k}^\infty{y\frac{\theta k^\theta}{y^{\theta + 1}} dy}
+	=
+	\theta k^\theta \int_{k}^\infty{y^{-\theta} dy}
+	=
+	\\
+	\theta k^\theta \left[- \frac{1}{\theta - 1} y^{-\theta + 1} \right]_k^\infty
+	=
+	\frac{\theta}{\theta - 1} k^\theta k^{-\theta + 1} =
+	k \frac{\theta}{\theta - 1}
+	\\
+	\\
+	Var(Y) = E(Y^2) - E(Y)^2 \qquad
+	E(Y^2)
+	=
+	\int_{k}^\infty{y^2 f(y) dy}
+	=
+	\int_{k}^\infty{y^2 \frac{\theta k^\theta}{y^{\theta + 1}} dy} =
+	\\
+	\theta k^\theta \int_{k}^\infty{y^{-\theta + 1} dy}
+	=
+	\theta k^\theta \left[- \frac{1}{\theta - 2} y^{\theta + 2} \right]_k^\infty
+	=
+	\theta k^\theta \frac{1}{\theta - 2} k^{-\theta + 2}
+	=
+	k^2 \frac{\theta}{\theta - 2}
+\end{gather*}
+

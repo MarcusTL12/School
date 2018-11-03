@@ -1,0 +1,14 @@
+a)
+intranett er et lokalt netverk
+
+b)
+en host sender og mottar data fra klienter hvor pakkene routes til rett maskin av routeren.
+
+c)
+Dette er en IP adresse
+
+d)
+En IP adresse er adressen til en maskin på et netverk som routeren bruker for å sende pakkene rett sted.
+
+e)
+IPv4 er en 4 byte adresse (4 000 000 000 ish) mens ipv6 er 16

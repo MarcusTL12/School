@@ -1,0 +1,147 @@
+\begin{center}
+\LARGE{\textbf{Eksperiment 10: Aldolkonensasjon - syntese av tetrafenylsyklopentadienon}}
+\end{center}
+
+\section*{Sammendrag}
+
+Syntese av tetrafenylpentadienon ble gjort ved basekatalysert aldolkondensasjon av benzil og 1,3-difenylpropan-2-ol. Produkt ble framstilt til 63 \% utbytte og TLC viste rent produkt.
+
+
+\section{Teori}
+
+En  aldolkondensasjonsreaksjon er en reaksjon hvor en enol reagerer med et aldehyd eller keton for å danne en aldol som spalter av vann og danner et $\alpha-\beta$ umettet aldehyd eller keton\cite{OrganicChemistry}. Rene aldehyder eller ketoner med $\alpha$-hydrogener vil kunne reagere med seg selv i en aldol kondensasjon da de vil eksistere i en likevekt med den tauteomere enol formen. Aldolkondensasjoner er base- eller syrekatalyserte da dette vil katalysere dannelsen av enol/enolat. Generell reaksjonsmekanisme for basekatalysert står i figur \ref{fig:genmek}.
+
+
+\begin{figure}[ht!]
+    \centering
+        \scalebox{0.8}{
+            \schemestart
+                \subscheme{
+                    \chemfig[yshift = 10]{(=[@{3_B}90]@{3_T}O)(-[-30]R)-[@{2_T}-150](-[@{2_B}::60]@{1_T}H)-[::-60]R}
+                    \+
+                    \chemfig{@{1_B}OH^{-}}
+                    \arrow{<=>}
+                    \chemfig{(-[90]\chnegS{O})(-[-30]R)=[-150]-[::-60]R}
+                    \+
+                    \chemfig{H_2O}
+                }
+                \arrow{->}[-90, 0.3, white]
+                \subscheme{
+                    \chemfig[yshift = -10]{R-[30]@{4_T}(=[@{6_B}90]@{6_T}O)-[-30]R}
+                    \+
+                    \chemfig{(-[@{5_T}90]@{5_B}\chnegS{O})(-[-30]R)=[@{4_B}-150]-[::-60]R}
+                    \arrow{->}
+                    \chemfig{R-[30](-[90]R)(-[150]\chnegS{O})-[-30](-[-120]R)(-[-60]H)-[30](=[90]O)-[-30]R}
+                }
+                \arrow{->}[-90, 0.3, white]
+                \subscheme{
+                    \chemfig{R-[30](-[90]R)(-[150]@{7_B}\chnegS{O})-[-30](-[-120]R)(-[-60]H)-[30](=[90]O)-[-30]R}
+                    \+
+                    \chemfig{@{7_T}H_2O}
+                    \arrow{->}
+                    \chemfig{R-[30](-[90]R)(-[150]HO)-[-30](-[-120]R)(-[@{9_B}-60]@{8_T}H)-[@{9_T}30](=[@{10_B}90]@{10_T}O)-[-30]R}
+                    \+
+                    \chemfig{@{8_B}OH^{-}}
+                }
+                \arrow{->}[-90, 0.3, white]
+                \subscheme{
+                    \arrow{->[][-\chemfig{H_2O}]}
+                    \chemfig{R-[30](-[90]R)(-[@{13_B}150]H@{13_T}O)-[@{12_T}-30](-[-90]R)=[@{12_B}30](-[@{11_T}90]@{11_B}\chnegS{O})-[-30]R}
+                    \+
+                    \arrow{->[][-\chemfig{OH^{-}}]}
+                    \chemfig{R-[30](-[90]R)=[-30](-[-90]R)-[30](=[90]O)-[-30]R}
+                }
+            \schemestop
+            \chemmove{
+                \ep{1}{-90:8}{0:20}
+                \ep{2}{0:4}{-60:4}
+                \ep{3}{-30:5}{-30:6}    %LINE 1
+                \ep{4}{-90:10}{-90:10}
+                \ep{5}{30:5}{30:6}
+                \ep{6}{-30:5}{-30:6}    %LINE 2
+                \ep{7}{90:10}{90:20}
+                \ep{8}{-135:5}{0:20}
+                \ep{9}{0:4}{-30:4}
+                \ep{10}{-30:5}{-30:6}   %LINE 3
+                \ep{11}{30:5}{30:6}
+                \ep{12}{90:5}{90:5}
+                \ep{13}{90:5}{80:6}     %LINE 4
+            }
+        }
+    \caption{Generell mekanisme for aldolkondensasjon\cite{OrganicChemistry}}
+    \label{fig:genmek}
+\end{figure}
+
+\section{Reaksjonsligninger}
+
+\begin{equation}
+    \begin{aligned}
+        \scalebox{0.8}{
+            \schemestart
+                \chemfig[yshift = -6]{(-[-150]!{Ph})(=[-30]O)-[90](-[::60]!{Ph})=[::-60]O}
+                \+
+                \chemfig{(-[-120]-[::60]!{Ph})(-[120]-[::-60]!{Ph})(=O)}
+                \arrow{->[KOH][Etanol]}[0, 1.2]
+                \chemfig{O=[180]*5(-(-!{Ph})=(-!{Ph})-(-!{Ph})=(-!{Ph})-)}
+                \+
+                2 \chemfig{H_2O}
+            \schemestop
+        }
+    \end{aligned}
+\end{equation}
+
+\input{Dokumenter/mekanisme.tex}
+
+\section{Fysikalske Data}
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{l c c}
+        \toprule
+        Forbindelse                     & Molar masse [g/mol] \\
+        \midrule
+        Benzil                          & 210,23 \\
+        1,3-difeylpropan-2-on           & 210,28 \\
+        Tetrafenylsyklopantadienon      & 384,48 \\
+        KOH                             & 56,11  \\
+        \bottomrule
+    \end{tabular}
+    \caption{Relevante molare masser\cite{SI}}
+    \label{tab:fysdat}
+\end{table}
+
+\section{Eksperimentelt}
+
+Blanding av benzil (1,05 g, 4,99 mmol), 1,3-difenylpropan-2-on (1,09 g, 5,18 mmol), KOH (0,15 g, 2,67 mmol) og etanol (96 \%, 30 mL) ble kokt med refluks i 15 minutter. Løsningen ble avkjølt i isbad til produkt ble krystallisert. Krystallene ble filtrert, vasket med vann til filtrat var nøytralt og så med kald etanol (96 \%, 10 mL). Krystallene ble analysert ved TLC (silica gel, \textit{n}-pentan og aceton, 9:1).
+
+
+\section{Resultater}
+
+Resultater for syntesen står i tabell \ref{tab:res}.
+
+\begin{table}[ht!]
+    \centering
+    \begin{tabular}{l c c c}
+        \toprule
+        Utbytte av tetrafenylpentadienon    & Masse [g] & Stoffmengde [mmol]    & relativt \\
+        \midrule
+        Teoretisk                           & 1,92      & 4,99 \\
+        Eksperimentelt                      & 1,21      & 3,15                  & 63 \%    \\
+        \midrule
+        \midrule
+        Forbindelse                         & R\textsubscript{f} \\
+        \midrule
+        Tetrafenylpentadienon               & 0,72 \\
+        Benzil                              & 0,62 \\
+        1,3-difenylpropan-2-on              & 0,62 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Resultater for syntese}
+    \label{tab:res}
+\end{table}
+
+\newpage
+
+\section{Diskusjon}
+
+Produkt ble framstilt med et relativt utbytte på 63 \% og TLC viser ingen tilstedeværelse av biprodukter. Stofftap vil trolig skylles oppløst stoff ved filtrering og vasking, og dannelse av biprodukt fra selvkondensering av difenylpropanonen. Vasking med vann fjerner rester av KOH og vasking med etanol fjerner biprodukt. Dannelse av biprodukt kunne blitt tilnærmet eliminert ved å tilsette difenylpropanon sakte til reaksjonsblandingen slik at konsentrasjonen var for lav til å selvkondensere.

@@ -1,0 +1,511 @@
+\begin{center}
+	\LARGE{\textbf{Øving 6}}
+\end{center}
+
+
+\section*{12.1}
+
+
+\subsection*{14}
+
+
+\subsubsection*{a)}
+
+\begin{gather*}
+	v(y): \mathbb{R} \rightarrow \mathbb{R}, \quad y = g(x, t) = x + c t
+	\\
+	\partDiff{v}{x}{}
+	=
+	\frac{d v}{d y} \cdot \partDiff{g}{x}{} = v'(x + c t),
+	\quad
+	\partDiff{v}{t}{}
+	=
+	\frac{d v}{d y} \cdot \partDiff{g}{t}{} = c \cdot v'(x + c t)
+	\\
+	\partDiff{v}{x}{2}
+	=
+	\frac{d^2 v}{dy^2} \cdot \left(\partDiff{g}{x}{}\right)^2 = v''(x + c t),
+	\quad
+	\partDiff{v}{t}{2}
+	=
+	\frac{d^2 v}{dy^2} \cdot \left(\partDiff{g}{t}{}\right)^2
+	=
+	c^2 v''(x + c t)
+	\\
+	\\
+	w(z): \mathbb{R} \rightarrow \mathbb{R}, \quad z = h(x, t) = x - c t
+	\\
+	\partDiff{w}{x}{2}
+	=
+	\frac{d^2 w}{dz^2} \cdot \left(\partDiff{h}{x}{}\right)^2 = w''(x - c t),
+	\quad
+	\partDiff{w}{t}{2}
+	=
+	\frac{d^2 w}{dz^2} \cdot \left(\partDiff{h}{t}{}\right)^2
+	=
+	c^2 w''(x - c t)
+	\\
+	\\
+	u(x, t) = v(x + c t) + w(x - c t),
+	\qquad
+	\partDiff{u}{t}{2} = c^2 \partDiff{u}{x}{2}
+	\\
+	\\
+	c^2 v''(x + c t) + c^2 w''(x - c t)
+	=
+	c^2 \left(
+		v''(x + c t) + w''(x - c t)
+	\right)
+	\\
+	c^2 \left(
+		v''(x + c t) + w''(x - c t)
+	\right)
+	=
+	c^2 \left(
+		v''(x + c t) + w''(x - c t)
+	\right)
+	\\
+	\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \blacksquare
+\end{gather*}
+
+
+\subsubsection*{d)}
+
+
+\begin{gather*}
+	u(x, y) = v(x) + w(y), \qquad u_{xy} = 0
+	\\
+	u_{xy} = \partDiff{}{x}{} \left(
+		\partDiff{u}{y}{}
+	\right)
+	=
+	\partDiff{}{x}{} \left(
+		w'(y)
+	\right)
+	= 0
+	\\
+	\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \blacksquare
+	\\
+	\\
+	u(x, y) = v(x) w(y), \qquad u u_{xy} = u_x u_y
+	\\
+	u \cdot u_{xy} = u \cdot \partDiff{}{x}{} \left(
+		\partDiff{u}{y}{}
+	\right)
+	=
+	v(x) w(y) \cdot \partDiff{}{x}{} \left(
+		v(x) w'(y)
+	\right)
+	=
+	v(x) w(y) \cdot v'(x) w'(y)
+	\\
+	u_x u_y = (v'(x) w(y)) \cdot (v(x) w'(y))
+	=
+	v(x) w(y) \cdot v'(x) w'(y)
+	\\
+	\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \blacksquare
+	\\
+	\\
+	u(x, t) = v(x + 2 t) + w (x - 2 t), \qquad u_{tt} = 4 u_{xx}
+	\\
+	u_{tt} = 2^2 v''(x + 2 t) + (-2)^2 w''(x - 2 t)
+	=
+	\\
+	4 (v''(x + 2 t) + w''(x - 2 t)) = 4 u_{xx}
+	\\
+	\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \blacksquare
+\end{gather*}
+
+
+\subsection*{15}
+
+\begin{gather*}
+	u(x, y) = a \ln{(x^2 + y^2)} + b, \qquad u_{xx} + u_{yy} = 0
+	\\
+	\\
+	u_x = \frac{2 a x}{x^2 + y^2}
+	\\
+	u_{xx} = \frac{2 a \left(
+		x^2 + y^2
+	\right) - 2 a x \cdot 2 x}{\left(
+		x^2 + y^2
+	\right)^2}
+	=
+	\frac{2 a \left(
+		y^2 - x^2
+	\right)}{\left(
+		x^2 + y^2
+	\right)^2}
+	\\
+	u_{yy} = \frac{2 a \left(
+		x^2 - x^2
+	\right)}{\left(
+		x^2 + y^2
+	\right)^2}
+	=
+	-\frac{2 a \left(
+		y^2 - x^2
+	\right)}{\left(
+		x^2 + y^2
+	\right)^2}
+	\\
+	\frac{2 a \left(
+		y^2 - x^2
+	\right)}{\left(
+		x^2 + y^2
+	\right)^2}
+	-
+	\frac{2 a \left(
+		y^2 - x^2
+	\right)}{\left(
+		x^2 + y^2
+	\right)^2}
+	=
+	0
+	\\
+	\\
+	u\left(
+		x, y\ |\ x^2 + y^2 = 1
+	\right) = a \ln{1} + b = 110
+	\Rightarrow
+	b = 110
+	\\
+	u\left(
+		x, y\ |\ x^2 + y^2 = 100
+	\right) = a \ln{100} + 110 = 0
+	\Rightarrow
+	a = \frac{-110}{2 \ln{10}}
+\end{gather*}
+
+
+\subsection*{21}
+
+
+\begin{gather*}
+	u_{yy} + 6 u_y + 13 u = 4 e^{3 y}
+	\\
+	\\
+	\lambda^2 + 6 \lambda + 13 = (\lambda + 3 - 2 i) (\lambda + 3 + 2 i)
+	\\
+	u(x, y) = u_p(y) + u_h(x, y)
+	\\
+	u_h = e^{-3 y} \left(
+		C_1(x) \cos{2 y} + C_2(x) \sin{2 y}
+	\right)
+	\\
+	\\
+	u_p = A e^{3 y}, \quad u_p' = 3 A e^{3 y}, \quad u_p'' = 9 A e^{3 y}
+	\\
+	9 A + 6 \cdot 3 A + 13 A = 4 \Rightarrow A = \frac{1}{10}
+	\\
+	\\
+	u(x, y) = \frac{1}{10} e^{3 y} + e^{-3 y} \left(
+		C_1(x) \cos{2 y} + C_2(x) \sin{2 y}
+	\right)
+\end{gather*}
+
+
+\newpage
+
+
+\section*{12.3}
+
+Generell løsning av bølgeligning:
+
+\begin{gather*}
+	\partDiff{u}{t}{2} = c^2 \partDiff{u}{x}{2},
+	\qquad
+	c^2 = 1, \quad 0 \leq x \leq 1
+	\\
+	\\
+	u_n(x, t) = F(x) G(t)
+	\\
+	F(x) G''(t) = F''(x) G(t)
+	\\
+	\frac{G''(t)}{G(t)} = \frac{F''(x)}{F(x)} = k
+	\\
+	F''(x) - k F(x) = 0, \quad G''(t) - k G(t) = 0, \quad
+	k = -p^2
+	\\
+	F''(x) + p^2 F(x) = 0, \qquad
+	F(x) = A \cos{p x} + B \sin{p x}
+	\\
+	F(0) = A = 0, \qquad
+	F(1) = B \sin{p} = 0
+	\\
+	p = n \pi, \qquad n \in \mathbb{Z}
+	\\
+	F(x) = sin(n \pi x)
+	\\
+	G(t) = A_n \cos{n \pi t} + B_n \sin{n \pi t}
+	\\
+	u_n(x, t) = \left(
+		A_n \cos{n \pi t} + B_n \sin{n \pi t}
+	\right) \sin{n \pi x}
+	\\
+	u(x, t) = \sum_{n = 1}^\infty{u_n(x, t)}
+	=
+	\sum_{n = 1}^\infty{\left(
+		A_n \cos{n \pi t} + B_n \sin{n \pi t}
+	\right) \sin{n \pi x}}
+\end{gather*}
+
+
+\newpage
+
+
+\subsection*{7}
+
+
+\begin{gather*}
+	u(x, 0) = k x (1 - x),
+	\qquad
+	u_t(x, 0) = 0
+	\\
+	u_t(x, 0) = \sum_{n = 1}^\infty{B_n\sin{n \pi x}} =	0
+	\Rightarrow
+	B_n = 0
+	\\
+	u(x, 0) = \sum_{n = 1}^\infty{A_n\sin{n \pi x}} = k x (1 - x)
+	\\
+	A_n = 2 \int_0^1{k x (1 - x) \sin{n \pi x}\ dx} = \left\{
+		\begin{matrix*}
+			\frac{8 k}{\pi^3 n^3}	& n\ \text{odd} \\
+			0						& n\ \text{even}
+		\end{matrix*}
+	\right.
+	\\
+	u(x, t) = \frac{8 k}{\pi^3} \sum_{n\ \text{odd}}^\infty{\frac{1}{n^3} \cos{n \pi t}\ \sin{n \pi x}}
+\end{gather*}
+
+\bigskip
+
+\plot{Figurer/f0.tikz}{5}{4}
+\plot{Figurer/f1.tikz}{5}{4}
+\plot{Figurer/f2.tikz}{5}{4}
+\bigskip
+\\
+\plot{Figurer/f3.tikz}{5}{4}
+\plot{Figurer/f4.tikz}{5}{4}
+\plot{Figurer/f5.tikz}{5}{4}
+\bigskip
+\\
+\plot{Figurer/f6.tikz}{5}{4}
+\plot{Figurer/f7.tikz}{5}{4}
+\plot{Figurer/f8.tikz}{5}{4}
+
+\newpage
+
+\subsection*{11}
+
+
+\begin{gather*}
+	u(x, 0) = \left\{
+		\begin{matrix*}
+			0					& x < \frac{1}{4}				\\
+			x - \frac{1}{4}		& \frac{1}{4} < x < \frac{1}{2}	\\
+			\frac{3}{4} - x		& \frac{1}{2} < x < \frac{3}{4}	\\
+			0					& x > \frac{3}{4}
+		\end{matrix*}
+	\right. ,
+	\qquad
+	u_t(x, 0) = 0
+	\\
+	B_n = 0
+	\\
+	A_n = 2 \left(
+		\int_{1/4}^{1/2}{
+			\left(
+				x - \frac{1}{4}
+			\right)
+			\sin{n \pi x}\ dx
+		}
+		-
+		\int_{1/2}^{3/2}{
+			\left(
+				\frac{3}{4} - x
+			\right)
+			\sin{n \pi x}\ dx
+		}
+	\right)
+	=
+	\\
+	\frac{2}{\pi^2 n^2} \left(
+		2 \sin{\frac{1}{2} \pi n}
+		-
+		\sin{\frac{1}{4} \pi n}
+		-
+		\sin{\frac{3}{4} \pi n}
+	\right)
+	=
+	\\
+	\frac{4}{\pi^2 n^2} \left\{
+		\begin{matrix*}
+			\sin{\frac{1}{2} \pi n} - \sin{\frac{1}{4} \pi n}	& n\ \text{odd}	\\
+			0													& n\ \text{even}
+		\end{matrix*}
+	\right.
+	\\
+	u(x, t) = \frac{4}{\pi^2} \sum_{n\ \text{odd}}^\infty{\frac{1}{n^2} \left(
+		\sin{\frac{1}{2} \pi n} - \sin{\frac{1}{4} \pi n}
+	\right) \cos{n \pi t}\ \sin{n \pi x}}
+\end{gather*}
+
+\bigskip
+
+\plot{Figurer/g0.tikz}{4.85}{4}
+\plot{Figurer/g1.tikz}{4.85}{4}
+\plot{Figurer/g2.tikz}{4.85}{4}
+\bigskip
+\\
+\plot{Figurer/g3.tikz}{4.85}{4}
+\plot{Figurer/g4.tikz}{4.85}{4}
+\plot{Figurer/g5.tikz}{4.85}{4}
+\bigskip
+\\
+\plot{Figurer/g6.tikz}{4.85}{4}
+\plot{Figurer/g7.tikz}{4.85}{4}
+\plot{Figurer/g8.tikz}{4.85}{4}
+
+\newpage
+
+\subsection*{14}
+
+
+\begin{gather*}
+	u(x, t) = \sum_{n = 1}^\infty{
+		\left(
+			A_n \cos{n t}
+			+
+			B_n \sin{n t}
+		\right)
+		\sin{n x}
+	}
+	\\
+	u_t(x, t) = \sum_{n = 1}^\infty{
+		\left(
+			-n A_n \sin{n t}
+			+
+			n B_n \cos{n t}
+		\right)
+		\sin{n x}
+	}
+	\\
+	u(x, 0) = \sum_{n = 1}^\infty{
+		A_n \sin{n x}
+	}
+	=
+	0
+	\Rightarrow
+	A_n = 0
+	\\
+	u_t(x, 0) = u(x, 0) = \sum_{n = 1}^\infty{
+		n B_n \sin{n x}
+	}
+	\Rightarrow
+	B_n = \int_0^\pi{
+		u_t(x, 0) \sin{n x}\ dx
+	} =
+	\\
+	0.01 \frac{2}{\pi n} \left(
+		\int_0^{\frac{\pi}{2}}{x \sin{n x}\ dx}
+		+
+		\int_{-\frac{\pi}{2}}^\pi{(\pi - x) \sin{n x}\ dx}
+	\right)
+	=
+	\\
+	0.01 \frac{4}{\pi n^3} \left\{
+		\begin{matrix*}
+			(-1)^{\frac{n + 1}{2}}	& n\ \text{odd} \\
+			0						& n\ \text{even}
+		\end{matrix*}
+	\right.
+	\Rightarrow
+	u(x, t) = \frac{0.04}{\pi} \sum_{n\ \text{odd}}^\infty{
+		(-1)^{\frac{n + 1}{2}} \frac{1}{n^3} \sin{n t} \sin{n x}
+	}
+\end{gather*}
+
+\bigskip
+
+\plot{Figurer/h0.tikz}{4.85}{4}
+\plot{Figurer/h1.tikz}{4.85}{4}
+\plot{Figurer/h2.tikz}{4.85}{4}
+\bigskip
+\\
+\plot{Figurer/h3.tikz}{4.85}{4}
+\plot{Figurer/h4.tikz}{4.85}{4}
+\plot{Figurer/h5.tikz}{4.85}{4}
+\bigskip
+\\
+\plot{Figurer/h6.tikz}{4.85}{4}
+\plot{Figurer/h7.tikz}{4.85}{4}
+\plot{Figurer/h8.tikz}{4.85}{4}
+
+\newpage
+
+\section*{Denne}
+
+\subsection*{a)}
+
+\begin{gather*}
+	\partDiff{u}{t}{} = \partDiff{u}{x}{2} + 2 u,
+	\qquad
+	0 < x < \pi,
+	\quad t > 0
+	\\
+	u_x(0, t) = 0,
+	\quad
+	u_x(\pi, t) = 0
+	\\
+	\\
+	u(x, t) = F(x)G(t)
+	\\
+	\partDiff{u}{t}{} = F(x) G'(t),
+	\quad
+	\partDiff{u}{x}{2} = F''(x)G(t)
+	\\
+	F(x)G'(t) = F''(x)G(t) + 2 F(x)G(t)
+	\\
+	\frac{G'(t)}{G(t)} = \frac{F''(x)}{F(x)} + 2 = k
+	\\
+	F''(x) + (2 - k) F(x) = 0
+	\qquad
+	G'(t) - k G(t) = 0
+	\\
+	\\
+	2 - k = p^2, \quad F''(x) + p^2 F(x) = 0
+	\\
+	F(x) = A \cos{p x} + B \sin{p x}
+	\\
+	F'(x) = - A p \sin{p x} + B p \cos{p x}
+	\\
+	F'(0) = B p = 0 \Rightarrow B = 0
+	\\
+	F'(\pi) = -A p \sin{p \pi} = 0 \Rightarrow p = n, \quad A = 1
+	\\
+	F(x) = \cos{n x}
+	\\
+	\\
+	G'(t) + \left(n^2 - 2\right) G(t) = 0
+	\\
+	G(t) = C e^{\left(2 - n^2\right) t}
+	\\
+	\\
+	u(x, t) = \sum_{n = 0}^\infty{
+		c_n e^{\left(2 - n^2\right) t} \cos{n x}
+	}
+\end{gather*}
+
+\subsection*{b)}
+
+\begin{gather*}
+	u(x, 0) = \sum_{n = 0}^\infty{c_n \cos{n x}}
+	=
+	(\cos{x} + 1)^2
+	=
+	\frac{1}{2} \cos{2 x} + 2 \cos{x} + \frac{3}{2}
+	\\
+	\\
+	u(x, t) = \frac{1}{2} e^{-2 t} \cos{2 x} + 2 e^{t} \cos{x} + \frac{3}{2}
+\end{gather*}

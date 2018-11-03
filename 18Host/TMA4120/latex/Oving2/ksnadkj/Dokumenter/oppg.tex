@@ -1,0 +1,227 @@
+\begin{center}
+	\LARGE{\textbf{Øving 1}}
+\end{center}
+
+
+\section*{6.4}
+
+\subsection*{11)}
+
+\begin{gather*}
+	y'' + 3 y' + 2 y = u(t - 1) + \delta(t - 2), \quad
+	y(0) = 0, \quad
+	y'(0) = 1 \\ \\
+	s^2 Y - s + 3 s Y + 2 Y = \frac{e^{-s}}{s} + e^{-2 s} \\
+	Y \paranth{s^2 + 3 s + 2} = \frac{e^{-s}}{s} + e^{-2 s} + s \\ \\
+	s + 3 s + 2 = (s + 2) (s + 3) \\ \\
+	Y = \frac{e^{-s}}{s (s + 2) (s + 3)} +
+	\frac{e^{-2 s}}{(s + 2) (s + 3)} +
+	\frac{s}{(s + 2) (s + 3)} \\
+	Y = \frac{e^{-s}}{6} \paranth{\frac{1}{s} - \frac{3}{s + 2} + \frac{2}{s + 3}} +
+	e^{-2 s} \paranth{\frac{1}{s + 2} - \frac{1}{s + 3}} -
+	\frac{2}{s + 2} + \frac{3}{s + 3} \\
+	y(t) = \frac{1}{6} u(t - 1) \paranth{1 - 3 e^{-2 t + 2} + 2 e^{-3 t + 3}} + \\
+	u(t - 2) \paranth{e^{-2 t + 4)} - e^{-3 t + 6)}} -
+	2 e^{-2 t} + 3 e^{-3 t}
+\end{gather*}
+
+
+\subsection*{12)}
+
+
+\begin{gather*}
+	y'' + 2 y' + 5 y = 25 t - 100 \delta (t - \pi), \quad
+	y(0) = -2, \quad
+	y'(0) = 5 \\ \\
+	s^2 Y + 2 s - 5 + 2 s Y + 4 + 5Y = \frac{25}{s^2} - 100 e^{-\pi s} \\
+	Y \paranth{s^2 + 2 s + 5} =
+	\frac{25}{s^2} - 100 e^{-\pi s} - 2 s + 1 \\
+	Y = \frac{25}{s^2 \paranth{s^2 + 2 s + 5}} -
+	\frac{100 e^{-\pi s}}{s^2 + 2 s + 5} -
+	\frac{2 s - 1}{s^2 + 2 s + 5} = \\
+	\frac{5}{s^2} - \frac{2}{s} + \bcancel{\frac{2 s - 1}{s^2 + 2 s + 5}} -
+	\frac{100 e^{-\pi s}}{(s + 1)^2 + 4} -
+	\bcancel{\frac{2 s - 1}{s^2 + 2 s + 5}} \\ \\
+	y(t) = 5 t - 2 - 50 u(t - \pi) e^{-t + \pi} \sin{2(t - \pi)} =\\
+	5 t - 2 - 50 u(t - \pi) e^{\pi - t} \sin{2 t}
+\end{gather*}
+
+
+\newpage
+
+\section*{6.5}
+
+\subsection*{10}
+
+
+\begin{gather*}
+	y(t) - \int_0^t{y(\tau) \sin{2(t - \tau)} d\tau} = \sin{2 t} \\ \\
+	\int_0^t{y(\tau) \sin{2(t - \tau)} d\tau} = y * \sin{2 t} \\ \\
+	Y - Y \cdot \frac{4}{s^2 + 4} =
+	Y \frac{s^2}{s^2 + 4} = \frac{4}{s^2 + 4} \\
+	Y = \frac{4}{s^2} \\ \\
+	y(t) = 4 t
+\end{gather*}
+
+
+\subsection*{13}
+
+
+\begin{gather*}
+	y(t) + 2 e^t \int_0^t{y(\tau) e^{-\tau} d\tau} = t e^t \\ \\
+	e^t \int_0^t{y(\tau) e^{-\tau} d\tau} =
+	\int_0^t{y(\tau) e^t e^{-\tau} d\tau} = 
+	\int_0^t{y(\tau) e^{t - \tau} d\tau} = y(t) * e^t \\ \\
+	Y + Y \frac{2}{s - 1} = Y \frac{s + 1}{s - 1} = \frac{1}{(s - 1)^2} \\
+	Y = \frac{1}{(s - 1) (s + 1)} =
+	\frac{1}{s^2 - 1} \\ \\
+	y(t) = \sinh{t}
+\end{gather*}
+
+
+\subsection*{22}
+
+
+\begin{gather*}
+	\frac{e^{- a s}}{s (s - 2)} =
+	\frac{e^{- a s}}{s} \cdot \frac{1}{s - 2} => \\
+	f(t) = u(t - a) * e^{2 t} = \int_0^t{u(\tau - a) e^{2(t - \tau)} d\tau} =
+	e^{2 t} \int_0^t{u(\tau - a) e^{-2 \tau} d \tau} = \\
+	e^{2 t} u(t - a) \int_a^t{e^{-2 \tau} d \tau} =
+	- \frac{1}{2} e^{2 t} u(t - a) \paranth{e^{-2 t} - e^{-2 a}} = \\
+	- \frac{1}{2} u(t - a) \paranth{1 - e^{2 (t - a)}}
+\end{gather*}
+
+
+\newpage
+
+
+\subsection*{23}
+
+\begin{gather*}
+	\laplace{f} =
+	\frac{40.5}{s \paranth{s^2 - 9}} =
+	\cdot \frac{4.5}{s} \cdot \frac{9}{s^2 - 9} \\
+	f(t) = 4.5 * \sinh{t} =
+	4.5 \int_0^t{\sinh{\tau} d\tau} =
+	4.5 \paranth{\cosh{t} - 1}
+\end{gather*}
+
+
+\section*{6.6}
+
+
+\subsection*{6}
+
+
+\begin{gather*}
+	\laplace{t^2 \sin{3 t}}	=
+	\frac{d^2}{ds^2} \laplace{\sin{3 t}} = \\
+	\frac{d^2}{ds^2} \cdot \frac{9}{s^2 + 9} =
+	54 \cdot \frac{s^2 - 3}{\paranth{s^2 + 9}^3}
+\end{gather*}
+
+
+\subsection*{14}
+
+
+\begin{gather*}
+	\frac{s}{\paranth{s^2 + 16}^2} =
+	\frac{d}{ds} \frac{-1}{2 \paranth{s^2 + 16}} \\
+	f(t) = \frac{t}{8} \sin{4 t}
+\end{gather*}
+
+
+\subsection*{16}
+
+
+\begin{gather*}
+	\frac{2 s + 6}{\paranth{s^2 + 6 s + 10}^2} = - \frac{d}{ds} \frac{1}{s^2 + 6 s + 10} \\
+	\frac{1}{s^2 + 6 s + 10} =
+	\frac{1}{\paranth{s + 3}^2 + 1} \\
+	f(t) = t e^{-3 t} \sin{t}
+\end{gather*}
+
+
+\subsection*{17}
+
+
+\begin{gather*}
+	\frac{d}{ds} \ln{\frac{s}{s - 1}} = \frac{1}{s (s + 1)} \\
+	\invlaplace{\frac{1}{s (s + 1)}} =
+	1 * e^{-t} =
+	\int_0^t{e^{- \tau} d\tau} = - \paranth{e^{-t} - 1} \\ \\
+	f(t) = \frac{e^{-t} - 1}{t}
+\end{gather*}
+
+
+\newpage
+
+
+\section*{6.7}
+
+
+\subsection*{6}
+
+
+\begin{gather*}
+	y_1' = 5 y_1 + y_2, \quad
+	y_2' = y_1 + 5 y_2, \quad
+	y_1(0) = 1, \quad
+	y_2(0) = -3 \\ \\
+	s Y_1 - 1 = 5 Y_1 + Y_2, \quad
+	s Y_2 + 3 = Y_1 + 5 Y_2 \\
+	Y_1 \paranth{s - 5} - 1	= Y_2 \\
+	Y_2 \paranth{s - 5} + 3 = Y_1 \\ \\
+	\paranth{Y_1 \paranth{s - 5} - 1} \paranth{s - 5} + 3 = Y_1 \\
+	Y_1 \paranth{s - 5}^2 - \paranth{s - 5} + 3 = Y_1 \\
+	Y_1 \paranth{\paranth{s - 5}^2 - 1} = s - 8 \\
+	Y_1 = \frac{s - 8}{\paranth{s - 5}^2 - 1} =
+	\frac{2}{s - 4} - \frac{1}{s - 6} \\ \\
+	\paranth{Y_2 \paranth{s - 5} + 3} \paranth{s - 5} - 1 = Y_2 \\
+	Y_2 \paranth{s - 5}^2 + 3 \paranth{s - 5} - 1 = Y_2 \\
+	Y_2 \paranth{\paranth{s - 5}^2 - 1} = -3 s + 16 \\
+	Y_2 = \frac{-3 s + 16}{\paranth{s - 5}^2 - 1} =
+	\frac{-2}{s - 4} - \frac{1}{s - 6} \\ \\
+	y_1(t) = 2 e^{4 t} - e^{6 t}, \quad
+	y_2(t) = - 2 e^{4 t} - e^{6 t}
+\end{gather*}
+
+
+\subsection*{12}
+
+
+\begin{gather*}
+	y_1'' = - 4 y_1 + 5 y_2, \quad
+	y_2'' = - y_1 + 2 y_2,
+	\\
+	y_1(0) = 1, \quad
+	y_1'(0) = 0, \quad
+	y_2(0) = 2, \quad
+	y_2'(0) = 0
+	\\ \\
+	s^2 Y_1 - s = - 4 Y_1 + 5 Y_2, \quad
+	s^2 Y_2 - 2 s = - Y_1 + 2 Y_2
+	\\ \\
+	Y_1 \paranth{s^2 + 4} - s = 5 Y_2
+	\\
+	Y_2 \paranth{s^2 - 2} - 2 s = - Y_1
+	\\ \\
+	\paranth{2 s - Y_2 (s^2 - 2)} \paranth{s^2 + 4} - s = 5 Y_2 \\
+	2s \paranth{s^2 + 4} - Y_2 \paranth{s^2 - 2} \paranth{s^2 + 4} - s = 5 Y_2
+	\\
+	Y_2 \paranth{\paranth{s^2 - 2} \paranth{s^2 + 4} + 5} = 2 s \paranth{s^2 + 4} - s \\
+	Y_2 = \frac{2 s^3 + 7 s}{\paranth{s^2 + 3} \paranth{s - 1} \paranth{s + 1}} =
+	\frac{1}{s - 1} + \frac{1}{s + 1} - \frac{s}{s^2 + 3} \\
+\end{gather*}
+
+\newpage
+
+\begin{gather*}
+	Y_1 = \frac{s^3 + 8 s}{\paranth{s^2 + 3} (s- 1) (s + 1)} =
+	Y_2 = \frac{9}{8(s - 1)} + \frac{9}{8(s + 1)} - \frac{5 s}{4 \paranth{s^2 + 3}}
+\end{gather*}
+
+
+
+\subsection*{denne}

@@ -1,0 +1,65 @@
+\begin{equation}
+	\begin{aligned}
+		\schemestart \chemfig{-[30]-[-30]-[30]-[-30]Br} + \ce{NaI} \arrow{->[][Aceton]}[0, 1.5] \chemfig{-[30]-[-30]-[30]-[-30]I} + \ce{NaBr (s)} \schemestop
+	\end{aligned}
+	\label{eq:SN2-1}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\schemestart \chemfig[yshift=-14pt]{-[30](-[90]Br)-[-30]-[30]} + \ce{NaI} \arrow{->[][Aceton]}[0, 1.5] \chemfig[yshift=-14pt]{-[30](-[90]I)-[-30]-[30]} \space\space + \ce{NaBr (s)} \schemestop
+	\end{aligned}
+	\label{eq:SN2-2}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\schemestart \chemfig[yshift=-9]{-[30]((-[-90])-[90]Br)-[-30]} + \ce{NaI} \arrow{->[][Aceton]}[0, 1.5] \chemfig[yshift=-9]{-[30]((-[-90])-[90]I)-[-30]} \space\space + \ce{NaBr (s)} \schemestop
+	\end{aligned}
+	\label{eq:SN2-3}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\schemestart \chemfig[yshift=-6]{Br-[-30]-[30](-[90])(-[30])-[-30]} + \ce{NaI} \arrow{->[][Aceton]}[0, 1.5] \chemfig[yshift=-6]{I-[-30]-[30](-[90])(-[30])-[-30]} \space\space + \ce{NaBr (s)} \schemestop
+	\end{aligned}
+	\label{eq:SN2-4}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\schemestart \chemfig{-[30]-[-30]-[30]-[-30]Cl} + \ce{NaI} \arrow{->[][Aceton]}[0, 1.5] \chemfig{-[30]-[-30]-[30]-[-30]I} + \ce{NaCl (s)} \schemestop
+	\end{aligned}
+	\label{eq:SN2-5}
+\end{equation}
+
+
+\subsubsection{\texorpdfstring{S\textsubscript{N}1}r reaksjoner}
+
+\begin{equation}
+	\begin{aligned}
+		\schemestart\chemfig{-[30]-[-30]-[30]-[-30]Br} \arrow{->[\ce{AgNO3}][\chemfig{-[30, 0.7]-[-30, 0.7]OH}]}[0, 1.5] \chemfig{-[30]-[-30]-[30]-[-30]O-[30]-[-30]} \space \space + \ce{HNO3} + \ce{AgBr (s)} \schemestop
+	\end{aligned}
+	\label{eq:SN1-1}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\schemestart \chemfig{-[30](-[90]Br)-[-30]-[30]} \arrow{->[\ce{AgNO3}][\chemfig{-[30, 0.7]-[-30, 0.7]OH}]}[0, 1.5] \chemfig[yshift = -16]{-[30](-[90]O-[30]-[-30])-[-30]-[30]} ~~ + \ce{HNO3} + \ce{AgBr (s)} \schemestop
+	\end{aligned}
+	\label{eq:SN1-2}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\schemestart \chemfig{-[30](-[-90])(-[90]Br)-[-30]} \arrow{->[\ce{AgNO3}][\chemfig{-[30, 0.7]-[-30, 0.7]OH}]}[0, 1.5] \chemfig[yshift = -12]{-[30](-[-90])(-[90]O-[30]-[-30])-[-30]} ~~ + \ce{HNO3} + \ce{AgBr (s)} \schemestop
+	\end{aligned}
+	\label{eq:SN1-3}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\schemestart \chemfig{-[30](-[-90])(-[90]Cl)-[-30]} \arrow{->[\ce{AgNO3}][\chemfig{-[30, 0.7]-[-30, 0.7]OH}]}[0, 1.5] \chemfig[yshift = -12]{-[30](-[-90])(-[90]O-[30]-[-30])-[-30]} ~~ + \ce{HNO3} + \ce{AgCl (s)} \schemestop
+	\end{aligned}
+	\label{eq:SN1-4}
+\end{equation}

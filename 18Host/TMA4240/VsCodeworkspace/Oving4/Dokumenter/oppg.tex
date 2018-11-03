@@ -1,0 +1,310 @@
+\begin{center}
+	\LARGE{\textbf{Innlevering 4}}
+\end{center}
+
+
+\section*{Oppgave 1}
+
+
+\begin{gather*}
+	M_X(t) = E(e^{t x}) = \int_{-\infty}^{\infty}{
+		e^{t x} f(x) dx
+	}
+	=
+	\int_0^\infty{
+		\frac{\theta^4}{6} x^3 e^{t x \theta x} dx
+	}
+	=
+	\frac{\theta^4}{6} \int_0^\infty{
+		x^3 e^{-(\theta - t) x} dx
+	} = (*)
+	\\
+	\\
+	y = (\theta - t) x
+	\qquad
+	x = \frac{y}{\theta - t}
+	\qquad
+	dx = \frac{dy}{\theta - t}
+	\\
+	\\
+	(*) = \frac{\theta^4}{6} \int_0^\infty{
+		\frac{y^3}{(\theta - t)^3} e^{-y} \frac{dy}{\theta - t}
+	}
+	=
+	\frac{1}{6} \frac{\theta^4}{(\theta - t)^4} \int_0^\infty{y^3 e^{-y} dy}
+	\\
+	\\
+	=
+	\frac{1}{6} \frac{1}{\left(1 - \frac{t}{\theta}\right)^4} \Gamma(3)
+	=
+	\left(1 - \frac{t}{\theta}\right)^{-4}
+	\\
+	\\
+	E(X) = M_X'(0) = \left.
+		\frac{4}{\theta} \left(
+			1 - \frac{t}{\theta}
+		\right)^{-5}
+	\right|_0
+	=
+	\frac{4}{\theta}
+\end{gather*}
+
+
+\section*{Oppgave 2}
+
+\subsection*{a)}
+
+
+\begin{gather*}
+	\int_\theta^\infty{c e^{- (x - \theta)} dx} = -c \left[e^{-(x - \theta)}\right]_\theta^\infty = c = 1
+	\\
+	\\
+	P(X > \theta + 1) = \int_{\theta + 1}^\infty{e^{-(x - \theta)} dx} = -\left[e^{-(x - \theta)}\right]_{\theta + 1}^\infty
+	=
+	e^{-1} = 0.368
+\end{gather*}
+
+
+\subsection*{b)}
+
+\begin{gather*}
+	M_Y(t) = M_X(2 t) \cdot e^{3 t}
+	\qquad
+	M_X(t) = \frac{1}{1 - t} \cdot e^{\theta}
+	\\
+	\text{Siden X er eksponentialfordelt og forskjøvet } \theta \text{ til høyre}
+	\\
+	M_Y(X) = \frac{1}{1 - 2 t} \cdot e^{3 t + 2 \theta t} \Rightarrow f(y) = e^{-(2 y - 3 - 2 \theta)}	\quad y > 3 + 2 \theta
+	\\
+	P(Y > \theta + 1) = 1 \Leftarrow \theta + 1 < 3 + 2 \theta
+\end{gather*}
+
+
+\subsection*{c)}
+
+\begin{gather*}
+	P(W > w) = P(\cap_{i = 1}^{10}{X_i > w}) = \prod_{i = 1}^{10}{P(X_i > w)} = P(X > w)^{10} = 1 - G(w)
+	\\
+	P(X > w) = 1 - F(w) = \int_w^\infty{e^{-(x - \theta) dx}} = e^{-(w - \theta)}
+	\\
+	G(w) = 1 - \left(e^{-(w - \theta)}\right)^{10} = 1 - e^{-10 (w - \theta)}
+	\\
+	g(w) = \frac{d}{dx} G(w) = 10 e^{-10 (w - \theta)}
+	\\
+	P(W > \theta + 1) = 1 - G(\theta + 1) = e^{-10 (\theta + 1 - \theta)} = e^{-10} = 0.0000454
+\end{gather*}
+
+
+\section*{Oppgave 3}
+
+
+\begin{gather*}
+	Var(\hat \mu) = 0.1^2 = 0.01
+	\\
+	Var(\tilde \mu) = \frac{1}{4} \cdot 0.2^2 + \frac{1}{4} \cdot 0.1^2
+	=
+	\frac{0.04}{4} + \frac{0.01}{4} = 0.0125
+	\\
+	Var(\mu^*) = \frac{0.04}{25} + \frac{16}{25} \cdot 0.01 = 0.008
+	\\
+	\text{En god estimator er forventningsrett og har lav varians}
+	\\
+	\mu^* \text{ har lavest varians og er derfor å foretrekke}
+\end{gather*}
+
+
+\section*{Oppgave 4}
+
+
+\subsection*{a)}
+
+
+\begin{gather*}
+	P(X > 2) = 1 - P(X < 2) = 1 - F(2) = 1 - (1 - e^{-0.04 \cdot 2^2})
+	=
+	e^{-0.16} = 0.8521
+	\\
+	\\
+	P(X > 5 | X > 2) = \frac{P(X > 5 \cup X > 2)}{P(X > 2)} = \frac{P(X > 5)}{e^{-0.16}}
+	=
+	\\
+	(1 - F(5)) \cdot e^{0.16} = e^{-0.04 \cdot 5^2} \cdot e^{0.16} = e^{0.16 - 1} = e^{-0.84} = 0.4317
+	\\
+	\\
+	f(x) = \frac{d}{dx} F(x) = \frac{d}{dx} (1 - e^{-\alpha x^2}) = 2 \alpha x e^{-\alpha x^2}
+\end{gather*}
+
+
+\subsection*{b)}
+
+
+\begin{gather*}
+	l(\alpha) = f(x_1, x_2, ... , x_n; \alpha) = \prod_{i = 1}^n{f(x_i)}
+	=
+	\prod_{i = 1}^n{2 \alpha x_i e^{-\alpha x_i^2}}
+	=
+	2^n \alpha^n e^{- \alpha \sum_{i = 1}^n{x_i^2}} \prod_{i = 1}^n{x_i}
+	\\
+	L(\alpha) = \ln{l(\alpha)} = n \ln{2} + n \ln{\alpha} + \sum_{i = 1}^n{\ln{x_i}} - \alpha \sum_{i = 1}^n{x_i^2}
+	\\
+	\frac{d L}{d \alpha} = \frac{n}{\alpha} - \sum_{i = 1}^n{x_i^2} = 0
+	\alpha = \frac{n}{\sum_{i = 1}^n{x_i^2}} \neq = \frac{n - 1}{\sum_{i = 1}^n{x_i^2}}
+	\\
+	\\
+	\hat \mu = \frac{\sqrt{\pi}}{2 \sqrt{\hat \alpha}}
+	\\
+	\hat \alpha = \frac{5}{3^2 + 4.5^2 + 5^2 + 7^2 + 6.5^2 + 5^2} = 0.02933
+	\\
+	\hat \mu = \frac{\sqrt{\pi}}{2 \sqrt(0.02933)} = 5.175
+\end{gather*}
+
+
+\subsection*{c)}
+
+
+\begin{gather*}
+	Y = u(X) = X^2
+	\qquad
+	X = u^{-1}(Y) = w(Y) = \sqrt{Y}
+	\\
+	\\
+	g(y) = f(w(y)) \cdot \abs{\frac{1}{2 \sqrt{y}}}
+	=
+	\cancel{2} \alpha \cancel{\sqrt{y}} e^{-\alpha y} \frac{1}{\cancel{2 \sqrt{y}}}
+	=
+	\alpha e^{-\alpha y}
+	\\
+	\\
+	E(\alpha) = E(\frac{n - 1}{\sum_{i = 1}^{n}{x_i^2}})
+	=
+	(n - 1) E(\frac{1}{\sum_{i = 1}^{n}{x_i^2}})
+	=
+	(n - 1) \frac{1}{(n - 1) E(X^2)} = \frac{1}{1 / \alpha} = \alpha
+\end{gather*}
+
+
+\section*{Oppgave 5}
+
+\subsection*{a)}
+
+\begin{gather*}
+	P(X > 1000) = 1 - F(1000) = 0.0228
+	\\
+	P(500 < X < 1000) = F(1000) - F(500) = 0.9759
+\end{gather*}
+
+
+\subsection*{b)}
+
+\begin{gather*}
+	f(x) = \frac{3^x}{x!} \cdot e^{-3}
+	\\
+	P(X = 0) = f(0) = \frac{3^0}{0!} \cdot e^{-3} = e^{-3} = 0.04979
+	\\
+	\\
+	P(X > 3 | X > 0) = \frac{P(X > 3 \cap X > 0)}{P(X > 0)} = \frac{P(X > 3)}{P(X > 0)}
+	=
+	\\
+	\frac{1 - (f(0) + f(1) + f(2) + f(3))}{1 - f(0)}
+	=
+	\frac{1 - (e^{-3} + 3 e^{-3} + 4.5 e^{-3} + 4.5 e^{-3})}{1 - e^{-3}} = 0.3713
+\end{gather*}
+
+
+\subsection*{c)}
+
+\begin{gather*}
+	P(X > 0) = 0.5 (1 - F(0)) = 0.5 - 0.5 e^{-4} = 0.4908
+	\\
+	\\
+	E(X) = 0.5 \cdot 0 + 0.5 \cdot 4 = 2
+\end{gather*}
+
+
+\subsection*{d)}
+
+\begin{gather*}
+	l(\mu, \theta) = f(x_1, x_2, ..., x_20; \mu, \theta) = \prod_{i = 1}^{20}{f(x_i)} =
+	\\
+	\prod_{i = 1}^{8}{\theta + (1 - \theta) e^{-\mu}} \cdot \prod_{i = 1}^{12}{(1 - \theta) \frac{\mu^{x_i}}{x_i!} e^{-\mu}} =
+	\\
+	\left(\theta + (1 - \theta) e^{-\mu}\right)^8 \cdot \prod_{i = 1}^{12}{(1 - \theta) \frac{\mu^{x_i}}{x_i!} e^{-\mu}} =
+	\\
+	\left(\theta + (1 - \theta) e^{-\mu}\right)^8 \cdot (1 - \theta)^{12} \cdot
+	e^{-12 \mu} \cdot \mu^{\sum_{i = 1}^{12}{x_i}} \cdot \prod_{i = 1}^{12}{\frac{1}{x!}}
+	\\
+	L(\mu, \theta) = \ln{l(\mu, \theta)} = 8 \ln{(\theta + (1 - \theta) e^{\mu})} + 12 \ln{(1 - \theta)} - 12 \mu
+	+ \ln{\mu} \sum_{i = 1}^{12}{x_i} - \sum_{i = 1}^{12}{\ln{x_i!}}
+	\\
+	\\
+	\partDiff{L}{\theta}{} = \frac{8}{\theta + (1 - \theta) e^\mu} \cdot (1 - e^{\mu}) - \frac{1}{1 - \theta} = 0
+\end{gather*}
+
+
+Fikk ikke tid til å formulere denne helt ferdig, men gleder meg til lf :)
+
+
+\section*{Oppgave 6}
+
+\subsection*{a)}
+
+\begin{gather*}
+	E(\hat a) = E\left(\frac{1}{n} \sum_{i = 1}^n{X_i}\right) = \frac{1}{n} \cdot n \cdot E(X) = E(X)
+	\\
+	Var(\hat a) = Var\left(\frac{1}{n} \sum_{i = 1}^n{X_i}\right) = \frac{1}{n^2} \cdot n \cdot Var(X) = \frac{1}{n} Var(X)
+	\\
+	\hat a \text{ er normalfordelt fordi det er en lineærkombinasjon av normalfordelte stokastiske variabler}
+\end{gather*}
+
+
+\subsection*{b)}
+
+\begin{gather*}
+	l(a, \sigma_G^2) = \prod_{i = 1}^{n}{f_1(X_i)} \cdot \prod_{i = 1}^{m}{f_2(y_i)}
+	=
+	\prod_{i = 1}^{n}{\frac{1}{\sqrt{2 \pi} \sigma_G} e^{-\frac{(X_i - a)^2}{2 \sigma_G^2}}}
+	\cdot
+	\prod_{i = 1}^{m}{\frac{4}{\sqrt{2 \pi} \sigma_G} e^{-\frac{8 (Y_i - a)^2}{\sigma_G^2}}}
+	\\
+	\ln{l} = -\frac{n}{2} \ln{2 \pi} - \frac{n}{2} \ln{\sigma_G^2} - \sum_{i = 1}^n{\frac{(X_i - a)^2}{2 \sigma_G^2}}
+	+
+	\ln{4} - \frac{m}{2} \ln{2 \pi} - \frac{m}{2} \ln{\sigma_G^2} - \sum_{i = 1}^m{\frac{8 (Y_i - a)^2}{\sigma_G^2}}
+	=
+	\\
+	\ln{4} - \frac{n + m}{2} \ln{2 \pi} - \frac{n + m}{2} \ln{\sigma_G^2}
+	-
+	\frac{1}{2 \sigma_G^2} \sum_{i = 1}^n{(X_i - a)^2} + \frac{8}{\sigma_G^2} \sum_{i = 1}^m{(Y_i - a)^2}
+	\\
+	\partDiff{}{a}{} \ln{l} = \frac{1}{\sigma_G^2} \sum_{i = 1}^n{(X_i - a)} + \frac{16}{\sigma_G^2} \sum_{i = 1}^m{(Y_i - a)} = 0
+	\\
+	n \bar X - n a + 16 m \bar Y - 16 m a = 0
+	\qquad
+	\hat a = \frac{n \bar X + 16 m \bar Y}{n + 16 m}
+\end{gather*}
+
+
+\begin{gather*}
+	\partDiff{}{\left.\sigma_G^2\right.}{} \ln{l}
+	=
+	- \frac{n + m}{2 \sigma_G^2} + \frac{1}{2 \left(\sigma_G^2\right)^2} \sum_{i = 1}^n{(X_i - a)^2}
+	+
+	\frac{8}{\left(\sigma_G^2\right)^2} \sum_{i = 1}^m{(Y_i - a)^2} = 0
+	\\
+	(n + m) \sigma_G^2 = \frac{1}{2} \sum_{i = 1}^n{(X_i - a)^2}
+	+
+	8 \sum_{i = 1}^m{(Y_i - a)^2}
+	\\
+	\sigma_G^2 = \frac{\frac{1}{2} \sum_{i = 1}^n{(X_i - a)^2}
+	+
+	8 \sum_{i = 1}^m{(Y_i - a)^2}}{n + m}
+	\\
+	\\
+	\text{Setter inn } a = \hat a = \frac{n \bar X + 16 m \bar Y}{n + 16 m}
+	\\
+	\\
+	\hat \sigma_G^2 = \frac{\frac{1}{2} \sum_{i = 1}^n{(X_i - \frac{n \bar X + 16 m \bar Y}{n + 16 m})^2}
+	+
+	8 \sum_{i = 1}^m{(Y_i - \frac{n \bar X + 16 m \bar Y}{n + 16 m})^2}}{n + m}
+\end{gather*}
+
+

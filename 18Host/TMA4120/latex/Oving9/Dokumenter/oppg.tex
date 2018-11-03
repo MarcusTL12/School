@@ -1,0 +1,179 @@
+\begin{center}
+	\LARGE{\textbf{Øving 9}}
+\end{center}
+
+
+\section*{14.1}
+
+\subsection*{6}
+
+
+\plot{Figurer/f0.tikz}{6}{6}
+
+
+\subsection*{11}
+
+
+\begin{minipage}{0.4\textwidth}
+	\plot{Figurer/f1.tikz}{6}{6}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.6\textwidth}
+	\begin{gather*}
+		z(t) = (1 + i) t + 3 i \qquad -1 \leq t \leq 1
+	\end{gather*}
+\end{minipage}%
+
+\subsection*{22}
+
+
+\begin{gather*}
+	f(z) = \text{Re } z \quad \text{is not analytic, and integration has to be done by line integral:}
+	\\
+	y = 1 + \frac{1}{2} (x - 1)^2
+	\qquad
+	x = t, \quad y = 1 + \frac{1}{2} (t - 1)^2 \quad 1 \leq t \leq 3
+	\\
+	z = t + i \left(1 + \frac{1}{2} (t - 1)^2\right)
+	\qquad
+	\frac{d z}{d t} = 1 + i
+	\\
+	\int_{C}{f(z) dz} = \int_{1}^{3}{f(z(t)) \cdot \frac{dz}{dt} dt} = \int_{1}^{3}{t \cdot (1 + i) dt} = 4 + 4 i
+\end{gather*}
+
+
+\subsection*{25}
+
+
+\begin{gather*}
+	\int_1^i{z e^{z^2} dz} = \int_1^{-1}{\frac{1}{2} e^u du} = \left[\frac{1}{2} e^{u}\right]_1^{-1} = \frac{1}{2} e^{-1} - \frac{1}{2} e = -\sinh{1}
+	\\
+	u = z^2 \qquad 2 z dz
+	\\
+	\\
+	z(t_1) = -t \quad -1 \leq t_1 \leq 0
+	\qquad
+	z(t_2) = i t_2 \quad 0 \leq t_2 \leq 1
+	\\
+	\\
+	\int_C{f(z) dz} = \int_{-1}^0{f(z(t_1)) \frac{dz}{dt_1} dt_1} + \int_{0}^1{f(z(t_2)) \frac{dz}{dt_2} dt_2}
+	=
+	\\
+	\int_{-1}^0{-t_1 e^{t_1^2} (-1) dt_1} + \int_{0}^1{i t_2 e^{-t_2^2} i dt_2}
+	=
+	\frac{1}{2} - \frac{1}{2} e - \frac{1}{2} + \frac{1}{2} e^{-1}
+	=
+	\\
+	\frac{1}{2} e^{-1} - \frac{1}{2} e = -\sinh{1}
+\end{gather*}
+
+
+\subsection*{29}
+
+
+\begin{gather*}
+	f(z) = \text{Im } z^2 = 2 i x y \qquad \text{not analytic}
+	\\
+	z(t_1) = t_1 \quad 0 \leq t_1 \leq 1
+	\quad
+	z(z_2) 1 - t_2 + i t_2 \quad 0 \leq t_2 \leq 1
+	\quad
+	z(t_3) = -i t_3 \quad -1 \leq t_3 \leq 0
+	\\
+	f(z(t_1)) = 0
+	\qquad
+	f(z(t_2)) = 2 i (1 - t_2) \cdot t_2
+	\qquad
+	f(z(t_3)) = 0
+	\qquad
+	\frac{d z}{d t_2} = -1 + i
+	\\
+	\\
+	\int_C{f(z) dz} = \int_0^1{2 i (t_2 - t_2^2) (-1 + i)}
+	=
+	-(2 + 2 i) \int_0^1{(t_1 - t_2^2) dt_2}
+	=
+	\\
+	-(2 + 2 i) \left[\frac{1}{2} t_2^2 - \frac{1}{3} t_2^3\right]_0^1
+	=
+	-(2 + 2 i) \left(\frac{1}{2} - \frac{1}{3}\right) = -\frac{1}{3} - \frac{1}{3} i
+\end{gather*}
+
+
+\section*{14.2}
+
+\subsection*{4}
+
+
+No, the function cannot be analytic in the annulus since the integral over the border would be 6 - 3 = 3 which is not zero.
+
+
+\subsection*{13}
+
+
+\begin{gather*}
+	f(z) = \frac{1}{z^4 - 1.2} \qquad \text{ Analytic for all } z \in \mathbb{C} \text{\textbackslash} \left\{\pm 1.2^{1/4}, \pm i 1.2^{1/4}\right\}
+	\\
+	z(t) = e^{i t} \qquad 0 \leq t \leq 2 \pi
+	\qquad
+	\frac{dz}{dt} = i e^{i t}
+	\\
+	\int_0^{2 \pi}{\frac{i e^{i t}}{e^{4 i t}} - 1.2} dt
+	=
+	\int_{-0.2}^{-0.2}{\frac{1}{u} \frac{1}{4 e^{3 i t}} du}
+	=
+	\frac{1}{4} \int_{-0.2}^{-0.2}{\frac{1}{u^{\frac{7}{4}}} du} = 0
+	\\
+	u = e^{4 i t} - 1.2 \quad du = 4 i e^{4 i t} dt \quad e^{3 i t} = \left(e^{4 i t}\right)^{\frac{3}{4}} = u^{\frac{3}{4}}
+	\\
+	\text{Cauchy's integral theorem applies} \Rightarrow f(x) \text{ is analytic in the unit circle}
+\end{gather*}
+
+
+\subsection*{22}
+
+
+\begin{gather*}
+	f(z) = \text{Re } z
+	\\
+	z(t_1) = t_1 \quad -1 \leq t_1 \leq 1 \qquad z(t_2) = e^{i t_2} \quad 0 \leq t_2 \leq \pi
+	\\
+	f(z(t_1)) = t_1 \quad \frac{dz}{dt_1} = 1 \qquad f(z(t_2)) = \cos{t_2} \quad \frac{dz}{dt_2} = i e^{i t_2}
+	\\
+	\\
+	\int_C{f(z) dz} = \int_{-1}^{1}{t_1 dt_1} + \int_0^\pi{\cos{t_2} i e^{i t_2} dt_2} =
+	\\
+	0 + \int_0^\pi{i \cos{t_2} (\cos{t_2} + i \sin{t_2}) dt_2}
+	=
+	\int_0^\pi{(i \cos^2{t_2} - \cos{t_2} \sin{t_2}) dt_2}
+	=
+	\\
+	\int_0^\pi{\left(\frac{1}{2} (1 + \cos{2 t_2}) - \frac{1}{2} \sin{2 t_2}\right) dt_2}
+	=
+	\int_0^\pi{\frac{1}{2}dt_2} = \frac{\pi}{2} \neq 0
+\end{gather*}
+
+
+\subsection*{24}
+
+
+\begin{gather*}
+	\oint_C{\frac{dz}{z^2 - 1}} = \oint_C{\left(\frac{\frac{1}{2}}{z - 1} - \frac{\frac{1}{2}}{z + 1}\right) dz}
+	=
+	\oint_{C_1}{\frac{\frac{1}{2}}{z - 1} dz} - \oint_{-C_2}{\frac{\frac{1}{2}}{z + 1} dz}
+	=
+	\\
+	2 i \pi g(-1) - 2 i \pi g(1) = 0, \qquad g(z) = \frac{1}{2}
+\end{gather*}
+
+
+\section*{17.1}
+
+
+\subsection*{10}
+
+
+\plot{Figurer/f2.tikz}{7}{7}
+\plot{Figurer/f3.tikz}{7}{7}
+
+

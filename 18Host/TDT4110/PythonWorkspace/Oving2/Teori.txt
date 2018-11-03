@@ -1,0 +1,23 @@
+a)
+Primærlagring er den lagringen som skjer i RAM hvor programmet lagrer lokale
+variable den jobber med. Sekundærlagring er hvor programmer lagrer informasjon
+mer permanent til filer for å tas opp og jobbes videre med senere.
+
+b)
+Hardisker er permantent Sekundærlagring med sekvensiell aksessering
+SSD er en permanent Sekundærlagring med tilfeldig aksessering
+RAM er volatilt minne med tilfeldig aksessering
+
+
+c)
+Silisium er en god halvleder som kan dopes for å gi halvlederegenskaper som
+kan brukes i dioder og transistorer.
+
+
+d)
+En elektrisk kontrolert bryter bygget opp av to PN-junctions (NPN/PNP)
+
+
+e)
+6.4 kbps
+

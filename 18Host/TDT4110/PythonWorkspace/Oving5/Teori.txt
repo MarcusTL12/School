@@ -1,0 +1,20 @@
+a)
+2^32 = 4294967296
+
+b)
+1920*1080 = 2073 600 / = 259 200
+
+c)
+Digital to Analog Converter. Konverterer digital data for eksempel fra en lydfil på en datamaskin til analog lyd data som kan drive en høytaler
+
+d)
+10010
+
+e)
+50 4F 50 = 01010000 01001111 01010000
+
+f)
+ting på skjermen
+
+g)
+Digital lyd sampler amplitude på diskrete tidspunkter som digitale tall mens analog lyd bruker kontinuerlige spenninger til å representere lydbølger.

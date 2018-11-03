@@ -1,0 +1,52 @@
+\documentclass{article}
+  \usepackage[margin=1.3in]{geometry}
+  \usepackage[norsk]{babel}
+  \usepackage[utf8]{inputenc}
+  \usepackage{graphicx}
+  \usepackage[section]{placeins}
+  \usepackage{amsmath}
+  \usepackage{amssymb}
+  \usepackage{mathtools}
+  \usepackage{esint}
+  \usepackage{harpoon}
+  \usepackage{mathtools}
+  \usepackage[labelfont=bf]{caption}
+  \usepackage{cancel}
+  \usepackage{pgfplots}
+  \pgfplotsset{compat=1.7}
+  \usepackage{scalerel,stackengine}
+  \stackMath
+  \newcommand\reallywidehat[1]{%
+  \savestack{\tmpbox}{\stretchto{%
+    \scaleto{%
+      \scalerel*[\widthof{\ensuremath{#1}}]{\kern-.6pt\bigwedge\kern-.6pt}%
+      {\rule[-\textheight/2]{1ex}{\textheight}}%WIDTH-LIMITED BIG WEDGE
+    }{\textheight}% 
+  }{0.5ex}}%
+  \stackon[1pt]{#1}{\tmpbox}%
+  }
+  
+  \newlength\figureheight
+  \newlength\figurewidth
+  
+  \newcommand{\plot}[3]{
+    \setlength\figureheight{#3 cm}
+    \setlength\figurewidth{#2 cm}
+    \input{#1}
+  }
+  
+  \setlength{\parindent}{0pt}
+  
+  % \newcommand{\partDiff}[2]{\frac{\partial #1}{\partial #2}}
+  \newcommand{\partDiff}[3]{\frac{\partial^{#3} #1}{\partial #2^{#3}}}
+  \newcommand{\abs}[1]{\left| #1 \right|}
+  \newcommand{\paranth}[1]{\left( #1 \right)}
+  \newcommand{\bracket}[1]{\left[ #1 \right]}
+  \newcommand{\laplace}[1]{\mathcal{L}\paranth{#1}}
+  \newcommand{\invlaplace}[1]{\mathcal{L}^{-1}\paranth{#1}}
+  % \newcommand{\lim}[2]{\underset{\scalebox{0.8}{#1}}{\text{lim}} #2}
+  
+  \begin{document}
+  \input{Dokumenter/oppg.tex}
+  \end{document}
+  

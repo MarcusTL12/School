@@ -1,0 +1,208 @@
+\begin{center}
+	\LARGE{\textbf{Innlevering 5}}
+\end{center}
+
+
+\section*{Oppgave 1}
+
+\subsection*{a)}
+
+\begin{gather*}
+	P(X < 1467) = P\left(Z < \frac{1467 - 1468}{2}\right) = 0.3085
+	\\
+	\\
+	P(1467 < \bar X < 1469) = P\left(-\frac{\sqrt{8}}{2} < Z < \frac{\sqrt{8}}{2}\right) = 1 - 2 * 0.0793 = 0.8414
+\end{gather*}
+
+
+\subsection*{a)}
+
+\begin{gather*}
+	\hat \mu = \bar X
+	\qquad
+	Z = \frac{\bar X - \mu}{\sigma / \sqrt{n}} \sim n(z, 1, 0)
+	\\
+	P\left(-z_{\alpha / 2} \leq \frac{\bar X - \mu}{\sigma / \sqrt{n}} \leq z_{\alpha / 2}\right) = 1 - \alpha = 0.9
+	\\
+	-z_{\alpha / 2} \leq \frac{\bar X - \mu}{\sigma / \sqrt{n}} \leq z_{\alpha / 2}
+	\\
+	-z_{\alpha / 2} \frac{\sigma}{\sqrt{n}} \leq \bar X - \mu \leq z_{\alpha / 2} \frac{\sigma}{\sqrt{n}}
+	\\
+	-\bar X - z_{\alpha / 2} \frac{\sigma}{\sqrt{n}} \leq -\mu \leq -\bar X + z_{\alpha / 2} \frac{\sigma}{\sqrt{n}}
+	\\
+	\bar X + z_{\alpha / 2} \frac{\sigma}{\sqrt{n}} \geq \mu \geq \bar X - z_{\alpha / 2} \frac{\sigma}{\sqrt{n}}
+	\\
+	\bar X - z_{\alpha / 2} \frac{\sigma}{\sqrt{n}} \leq \mu \leq \bar X + z_{\alpha / 2} \frac{\sigma}{\sqrt{n}}
+	\\
+	\\
+	\alpha = 0.1, \quad z_{\alpha / 2} = 1.645, \quad \sigma = 2
+	\\
+	\left[\bar X - 1.645 \frac{2}{\sqrt{n}}, \bar X + 1.645 \frac{2}{\sqrt{n}}\right]
+	\\
+	\\
+	\bar X = 1468.88, \quad n = 5
+	\\
+	\left[1468.88 - 1.645 \frac{2}{\sqrt{5}}, 1468.88 + 1.645 \frac{2}{\sqrt{5}}\right]
+	=
+	\\
+	[1467.41, 1470.35]
+\end{gather*}
+
+
+\section*{Oppgave 2}
+
+\subsection*{a)}
+
+\begin{gather*}
+	P(X > 185) = P\left(Z > \frac{185 - 179}{6}\right) = 0.1587
+	\\
+	P(X > 185 | X > 179) = \frac{P(X > 185 \cap X > 179)}{P(179)} = \frac{P(X > 185)}{0.5} = 2 * 0.1587 = 0.3174
+\end{gather*}
+
+
+\subsection*{b)}
+
+\begin{gather*}
+	E(\hat \beta) = E\left(\frac{\sum_{i = 1}^{n}{X_i}}{n \mu_M}\right) = E\left(\frac{1}{n}\sum_{i = 1}^{n}{X_i}\right) \frac{1}{\mu_M} = \frac{\mu_K}{\mu_M}
+	\Rightarrow
+	\\
+	\hat \beta \text{ er forventningsrett.}
+	\\
+	\\
+	\hat \beta = \frac{\bar X}{\mu_M} \sim n\left(\beta, \frac{\sigma_K}{\sqrt{n} \mu_M}\right)
+	\\
+	Z = \frac{\frac{\bar X}{\mu_M} - \beta}{\frac{\sigma_K}{\sqrt{n} \mu_M}}
+	=
+	\frac{\bar X - \mu_M \beta}{\sqrt{\frac{\sigma^2}{n}}} \sim n(0, 1)
+	\\
+	T = \frac{\bar X - \mu_M \beta}{\sqrt{\frac{s^2}{n}}} \sim t_{n - 1}
+	\\
+	\text{95\% konfidensintervall:}
+	\\
+	P(-t_{\alpha / 2} \leq T \leq t_{\alpha / 2}) = 1 - \alpha = 0.95
+	\\
+	-t_{\alpha / 2} \leq \frac{\bar X - \mu_M \beta}{\sqrt{\frac{s^2}{n}}} \leq t_{\alpha / 2}
+	\\
+	-t_{\alpha / 2} \sqrt{\frac{s^2}{n}} \leq \bar X - \mu_M \beta \leq t_{\alpha / 2} \sqrt{\frac{s^2}{n}}
+	\\
+	- \bar X - t_{\alpha / 2} \sqrt{\frac{s^2}{n}} \leq - \mu_M \beta \leq - \bar X + t_{\alpha / 2} \sqrt{\frac{s^2}{n}}
+	\\
+	\frac{\bar X}{\mu_M} + \frac{t_{\alpha / 2}}{\mu_M} \sqrt{\frac{s^2}{n}} \geq \beta \geq \frac{\bar X}{\mu_M} - \frac{t_{\alpha / 2}}{\mu_M} \sqrt{\frac{s^2}{n}}
+	\\
+	\frac{\bar X}{\mu_M} - \frac{t_{\alpha / 2}}{\mu_M} \sqrt{\frac{s^2}{n}} \leq \beta \leq \frac{\bar X}{\mu_M} + \frac{t_{\alpha / 2}}{\mu_M} \sqrt{\frac{s^2}{n}}
+	\\
+	\\
+	n = 5, \quad t_{4, 0.025} = 2.776, \quad \bar X = 167.5, \quad s^2 = 5.1^2
+	\\
+	\left[\frac{167.5}{179} - \frac{2.776}{179} \sqrt{\frac{5.1^2}{5}}, \frac{167.5}{179} - \frac{2.776}{179} \sqrt{\frac{5.1^2}{5}}\right]
+	=
+	\\
+	\left[0.900, 0.971\right]
+\end{gather*}
+
+
+\section*{Oppgave 3}
+
+\subsection*{a)}
+
+\begin{gather*}
+	P(X > 0) = 0.5
+	\\
+	P(X > 0.05) = P(Z > 0.05 / 0.03) = 1 - 0.9525 = 0.0475
+	\\
+	Y = \frac{1}{2} (X_1 + X_2)
+	\\
+	\sigma_{Y} = \frac{0.03}{\sqrt{2}} = 0.021
+	\\
+	P(-0.05 > Y \cup Y > 0.05) = 2 \cdot P(Z < -0.05 / 0.021) = 2 \cdot 0.0087 = 0.0174
+\end{gather*}
+
+
+\subsection*{b)}
+
+\begin{gather*}
+	\hat \sigma^2 = S^2 = \frac{1}{n - 1} \sum_{i = 1}^{n}{(X_i - \bar X)^2}
+	\\
+	\frac{(n - 1) S^2}{\sigma^2} \sim \chi^2_{n - 1}
+	\\
+	E(\chi^2_{n - 1}) = n - 1
+	\Rightarrow
+	E\left(\frac{(n - 1) S^2}{\sigma^2}\right) = \frac{n - 1}{\sigma^2} E(S^2) = n - 1
+	\\
+	E(S^2) = \sigma^2
+	\\
+	\\
+	\var{S^2} = \var{\frac{\sigma^2}{n - 1} \chi_{n - 1}^2} = \frac{\sigma}{\sqrt{n - 1}} \cdot 2 (n - 1) = 2 \sigma \sqrt{n - 1}
+	\\
+	\\
+	Z = \frac{(n - 1) S^2}{\sigma^2} \sim \chi^2_{n - 1}
+	\\
+	P(\chi^2_{n - 1, 1 - \alpha / 2} \leq Z \leq \chi^2_{n - 1, \alpha / 2}) = 1 - \alpha
+	\\
+	\chi^2_{n - 1, 1 - \alpha / 2} \leq \frac{(n - 1) S^2}{\sigma^2} \leq \chi^2_{n - 1, \alpha / 2}
+	\\
+	\frac{\chi^2_{n - 1, 1 - \alpha / 2}}{(n - 1)S^2} \leq \frac{1}{\sigma^2} \leq \frac{\chi^2_{n - 1, \alpha / 2}}{(n - 1)S^2}
+	\\
+	\frac{(n - 1)S^2}{\chi^2_{n - 1, 1 - \alpha / 2}} \geq \sigma^2 \geq \frac{(n - 1)S^2}{\chi^2_{n - 1, \alpha / 2}}
+	\qquad
+	\frac{(n - 1)S^2}{\chi^2_{n - 1, \alpha / 2}} \leq \sigma^2 \leq \frac{(n - 1)S^2}{\chi^2_{n - 1, 1 - \alpha / 2}}
+	\\
+	n = 5, \quad S^2 = 0.0003905, \quad \alpha = 0.05, \quad \chi^2_{4, 0.025} = 11.143, \quad \chi^2_{4, 1 - 0.025} = 0.484
+	\\
+	\left[\frac{4 \cdot 0.0003905}{11.143}, \frac{4 \cdot 0.0003905}{0.484}\right] = \left[0.00014, 0.00323\right]
+	\\
+	\text{Den oppgitte usikkerheten er inneholdt i intervallet som vil si at det er 95\%}\\ \text{sannsynelig at den faktisk er i dette intervallet.}
+\end{gather*}
+
+
+\section*{Oppgave 4}
+
+\subsection*{a)}
+
+\begin{gather*}
+	P(X > 40) = P\left(Z > \frac{40 - 35}{5}\right) = P(Z > 1) = 0.1587
+	\\
+	P(30 < X < 40) = 1 - 2 \cdot 0.1587 = 0.6826
+	\\
+	Y = X_1 + X_2 \sim n(70, 50)
+	\\
+	P(Y > 80) = P\left(Z > \frac{10}{\sqrt{50}}\right) = P(Z > 1.41) = 0.0793
+\end{gather*}
+
+
+\subsection*{b)}
+
+En god estimator må være forventningsrett og ha lavest mulig varians.
+
+\begin{gather*}
+	\hat \mu = \bar X = \frac{1}{5} \sum_{i = 1}^5{X_i}
+	\\
+	\var{\hat \mu} = \var{\frac{1}{5} \sum_{i = 1}^5{X_i}} = \frac{1}{25} \sum_{i = 1}^5{\var{X_i}} = \frac{1}{5} \sigma^2
+	\\
+	\hat \sigma^2 = S^2 = \frac{1}{4} \sum_{i = 1}^5{(X_i - \bar X)^2}
+	\\
+	\hat \sigma_\mu^2 = \frac{1}{5} S^2
+\end{gather*}
+
+
+\subsection*{c)}
+
+\begin{gather*}	
+	Z = \frac{\bar X - \mu}{\sqrt{\frac{S^2}{n}}} \sim t_{n - 1}
+	\\
+	P(-t_{n - 1, \alpha / 2} \leq Z \leq t_{n - 1, \alpha / 2}) = 1 - \alpha
+	\\
+	-t_{n - 1, \alpha / 2} \leq \frac{\bar X - \mu}{\sqrt{\frac{S^2}{n}}} \leq t_{n - 1, \alpha / 2}
+	\\
+	-t_{n - 1, \alpha / 2} \sqrt{\frac{S^2}{n}} \leq \bar X - \mu \leq t_{n - 1, \alpha / 2} \sqrt{\frac{S^2}{n}}
+	\\
+	\bar X - t_{n - 1, \alpha / 2} \sqrt{\frac{S^2}{n}} \leq \mu \leq \bar X + t_{n - 1, \alpha / 2} \sqrt{\frac{S^2}{n}}
+\end{gather*}
+
+
+\section*{d)}
+
+\begin{gather*}
+	x
+\end{gather*}
+

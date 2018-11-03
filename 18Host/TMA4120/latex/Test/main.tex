@@ -1,0 +1,113 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%Pakker og instillinger for dokumentet%%%%%%%%%%%%%%%%%
+
+\documentclass[pdftex, 10pt, norsk, a4paper, twoside]{article} 
+\usepackage[margin=1.3in]{geometry}							
+\usepackage[norsk]{babel}%Legger til norske bokstaver		
+\selectlanguage{norsk}%Får latex til å bruke norsk på steder der latex selv skriver ting. F.eks. Figur istedet for Figure	
+\usepackage[T1]{fontenc} %Definerer hvilken font som skal brukes. For spesielt interreserte er dette en 8-bit encoding med fonter som bruker 256 glyfer							
+\usepackage[utf8]{inputenc}%Tillater deg å skrive norske bokstaver direkte fra tastaturet, i steden for å bruke kommandoer.
+\usepackage{chemfig, amssymb, marvosym, textcomp}
+\setangleincrement{1}
+\setatomsep{2em}
+\setbondstyle{line width = 0.8pt}
+
+\newcommand{\posup}{\chemabove{}{\scriptstyle\oplus}}
+\newcommand{\posdown}{\chembelow{}{\scriptstyle\oplus}}
+\newcommand{\negup}{\chemabove{}{\scriptstyle\ominus}}
+\newcommand{\negdown}{\chembelow{}{\scriptstyle\ominus}}
+\newcommand{\chpos}{\scriptstyle\oplus}
+\newcommand{\chneg}{\scriptstyle\ominus}
+
+\newcommand{\chnegS}[1]{\chemabove{#1}{\quad\chneg}}
+\newcommand{\chposS}[1]{\chemabove{#1}{\quad\chpos}}
+
+\newcommand{\ep}[3]{\draw[shorten <=3, shorten >=3](#1_B)..controls +(#2 mm)and+(#3 mm)..(#1_T);}
+
+\definesubmol{Ph}{*6(-=-=-=)}
+\definesubmol{iprop}{(-[::60])-[::-60]}
+\definesubmol{tbut}{(-[::60])(-[::-60])-[::0]}
+
+\newcommand{\biggerskip}{\bigskip\bigskip\bigskip\bigskip}
+
+\usepackage{graphicx}% Nødvendig for å legge til bilder osv. 
+\usepackage[section]{placeins}
+\usepackage{cancel}% for å kunne "stryke over" ting i ligninger feks \frac{\bcancel{b}}{\bcancel{b}} = 1
+\usepackage{fmtcount}
+\usepackage{siunitx} % Lar deg bruke kommandoene \SI{tall}{\enhet} og \si{\enhet}. feks \si{\milli\gram\per\liter}. Dette er en veldig fin måte for å få konsistene enheter på. 
+\usepackage{booktabs}% lar deg bruke \toprule, \midrule og \bottomrule i tabeller for å lage pene tabeller.								
+\usepackage{multirow}% Lar deg lage rader inni radene i en tabell.
+\usepackage[pdftex,bookmarks,breaklinks]{hyperref}
+\usepackage{parskip}% Gjør at latex tolker paragrafer og ikke bare ignorerer "white space"
+\usepackage{rotating} %Gir deg en rekke muligheter for å rotere ting
+\usepackage{amsmath , amsfonts , amssymb}							
+\usepackage[hang,footnotesize,bf]{caption}% Gjør at captions under figurer og over tabeller blir pene.			
+
+\usepackage{epstopdf}% Omgjør .eps-filer til .pdf filer. Denne pakken er genial når man bruker chemdraw der man kan eksportere som eps. 
+\usepackage{textcomp,gensymb}
+\usepackage{float}% Tillater å bruke stor H i floats, dette kalles ofte for float of doom og er skjeldent anbefalt.
+\usepackage[super,square]{natbib}% Denne pakken er for bibliografien, super og square gjør at sitatet opphøyen og inlemmes av firkantparanteser. 
+\usepackage{fancyhdr}% Lar deg lage den fine headeren på toppen av siden.
+\pagestyle{fancy}
+\newcommand\EatDot[1]{} % Fjerner punktum på slutten av referansen.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Setter noen instillinger for å gjøre ting pent :) 
+\setlength\headheight{22.5pt}
+\floatstyle{plaintop}													
+\restylefloat{table}													
+\floatstyle{plain}														
+\restylefloat{figure}													
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Lager headeren
+\lhead{Marcus Takvam Lexander \\ Gruppe 7, plass 14B}			
+\chead{}
+\rhead{KJ1020 -- Organisk kjemi laboratoriekurs  \\ 12.4.18}	
+\lfoot{}
+\cfoot{\thepage}												
+\rfoot{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Denne kodebiten lager en egen funksjon som heter \signature{}{} med input sted og navn. Den brukes litt lengre ned i koden
+\newcommand{\signature}[2]{
+\begin{minipage}[t]{0.9\textwidth}
+\vspace{1cm}
+
+    #1, \today
+\vspace{1.5cm}
+
+\noindent
+\begin{tabular}{cc}
+    \rule{6cm}{1pt} & \hspace{2cm} \\
+    #2 & 
+\end{tabular}
+\vspace{1cm}
+\end{minipage}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{document}
+
+\input{Dokumenter/rapport}
+\vfill % Gjør at signaturen havner nederst på siden, uavhengig av hvor mye tekst det er på den. Dette er en god praksis
+\signature{Trondheim}{Marcus Takvam Lexander} % lager en signaturlinje.
+
+\bibliographystyle{ieeetr}%Definerer bibliografistil
+\bibliography{bibliografi}%navnet i krøllparantesene er navnet på .bib filen til bibliografien
+%Vedleggene skal alltid komme etter referanselisten og skal plaseres i en egen fil, på en ny side. Derfor brukes \newpage
+\newpage
+% \input{Dokumenter/vedlegg}
+
+\end{document}
