@@ -6,7 +6,7 @@ imp = ImageProcessing
 function main()
 	println("Starting")
 	# img = imp.loadImg("res/mazes/maze10.png")
-	@time img = imp.loadFloatImg("res/img2.png")
+	@time img = imp.loadFloatImg("res/PigBG16k.png")
 
 	@time imp.sobell!(img)
 
