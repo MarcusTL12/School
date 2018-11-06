@@ -48,9 +48,7 @@ class Board:
             (move, (self.getPiece(move[0]), self.getPiece(move[1]))))
         self.setPiece(move[1], self.getPiece(move[0]))
         self.setPiece(move[0], 0)
-        a, b, c = ((self.getPiece(move[1]) - 1) // 2) == 5, (move[1][1] + self.getPiece(move[1])) % 2 == 0, move[1][1] in [0, 7]
-        print((a, b, c))
-        if a and b and c:
+        if ((self.getPiece(move[1]) - 1) // 2) == 5 and (move[1][1] + self.getPiece(move[1])) % 2 == 0 and move[1][1] in [0, 7]:
             self.setPiece(move[1], 8 - self.getPiece(move[1]) % 2)
 
     def undo_move(self):
