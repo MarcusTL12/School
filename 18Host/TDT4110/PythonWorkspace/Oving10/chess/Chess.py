@@ -3,6 +3,7 @@
 class Board:
 	state = []
 
+	all_moves = []
 
 	undo_stack = []
 
@@ -125,9 +126,43 @@ class Board:
 					exits.extend(temp)
 		return (entries, exits)
 
+	
+	def update_valid_moves(self, turn):
+		check_moves = []
+		movs = self.all_valid_moves(turn)
+		for i in movs:
+			self.make_move(i)
+			self.all_moves = self.all_valid_moves(not turn)
+			if self.check(turn):
+				check_moves.append(i)
+			self.undo_move()
+		self.all_valid_moves = [j for j in movs if j not in check_moves]
 
-	def check():
-		pass
+
+	def check_mate(self, turn):
+		movs = self.all_moves
+		ret = True
+		for i in movs:
+			self.make_move(i)
+			self.all_moves = self.all_valid_moves(not turn)
+			if not self.check():
+				ret = False
+			self.undo_move()
+			if not ret:
+				break
+		self.all_moves = movs
+		return ret
+
+
+	def find_king(self, turn):
+		for y in range(8):
+			for x in range(8):
+				if (self.getPiece((x, y)) - (1 if turn else 0)) == 9:
+					return x, y
+
+
+	def check(self, turn):
+		return self.find_king(turn) in self.all_moves[1]
 
 
 def inbounds(pos):
@@ -135,33 +170,47 @@ def inbounds(pos):
 
 
 def to_pos(pos_str):
+	if len(pos_str) != 2:
+		return (-1, -1)
 	pos = (ord(pos_str[0]) - 65, 8 - int(pos_str[1]))
 	if pos[0] < 0 or pos[0] > 7 or pos[1] < 0 or pos[1] > 7:
-		raise ValueError()
+		return (-1, -1)
 	return pos
 
 
-def prompt_move():
+def prompt_move(game):
 	valid_move = False
 	message = "Make a move (ex. a2 a4): "
 	ret = (0, 0)
 	while not valid_move:
-		try:
-			inp = input(message).upper().split(' ')
-			ret = (to_pos(inp[0]), to_pos(inp[1]))
-			valid_move = True
-		except Exception:
-			message = "Not a valid move, try again: "
-			valid_move = False
+		inp = input(message).upper().split(' ')
+		print(inp)
+		if len(inp) != 2:
+			message = "1: Not valid move, Try again: "
+			continue
+		ret = (to_pos(inp[0]), to_pos(inp[1])) 
+		print(ret)
+		if ret not in game.all_moves:
+			print("2: Not valid move, Try again: ")
+			continue
+		valid_move = True
 	return ret
 
 
 def run():
 	game = Board()
 
-	print(game)
+	turn = True
+	game.update_valid_moves(turn)
 
-	temp = game.all_valid_moves(False)
-
-	print(temp)
-
+	while True:
+		print(game)
+		game.make_move(prompt_move(game))
+		game.update_valid_moves(turn)
+		if game.check_mate():
+			print("checkmate!")
+			break
+		elif game.check():
+			print("check!")
+			break
+		turn = not turn
