@@ -6,12 +6,24 @@ imp = ImageProcessing
 function main()
 	println("Starting")
 	# img = imp.loadImg("res/mazes/maze10.png")
+<<<<<<< HEAD
 	@time img = imp.loadFloatImg("res/img2.png")
 
 	@time imp.simple_blur!(img)
 	@time imp.sobell!(img)
+=======
+	@time img = imp.loadFloatImg("res/PigBG.png")
 
-	@time imp.writeImg("res/temp1.png", img)
+	f(x, y) = sin(pi * x * y)^2
+>>>>>>> cacb30eb4e64528263ba187e59ffd4dfa1c29640
+
+	# @time img[1, :, :] .= f.(img[1, :, :], 6 + 10)
+	# @time img[2, :, :] .= f.(img[2, :, :], 100)
+	# @time img[3, :, :] .= f.(img[3, :, :], 8 + 10)
+	# img .= f.(img, 1)
+	imp.sobell!(img)
+
+	@time imp.writeImg("res/temp3.png", img)
 end
 
 main()
