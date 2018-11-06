@@ -44,8 +44,7 @@ class Board:
         return (self.getPiece(pos1) + self.getPiece(pos2)) % 2 == (1 if opp else 0) and (0 not in (self.getPiece(pos1), self.getPiece(pos2)))
 
     def make_move(self, move):
-        self.undo_stack.append(
-            (move, (self.getPiece(move[0]), self.getPiece(move[1]))))
+        self.undo_stack.append((move, (self.getPiece(move[0]), self.getPiece(move[1]))))
         self.setPiece(move[1], self.getPiece(move[0]))
         self.setPiece(move[0], 0)
         if ((self.getPiece(move[1]) - 1) // 2) == 5 and (move[1][1] + self.getPiece(move[1])) % 2 == 0 and move[1][1] in [0, 7]:
@@ -129,7 +128,8 @@ class Board:
             if self.check(not turn):
                 check_moves.append(i)
             self.undo_move()
-        self.all_moves = ([j[0] for j in zip(movs[0], movs[1]) if j not in check_moves], [j[1] for j in zip(movs[0], movs[1]) if j not in check_moves])
+        self.all_moves =    ([j[0] for j in zip(movs[0], movs[1]) if j not in check_moves],
+                             [j[1] for j in zip(movs[0], movs[1]) if j not in check_moves])
 
     def find_king(self, turn):
         for y in range(8):
