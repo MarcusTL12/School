@@ -2,8 +2,8 @@
 using DataStructures
 
 
-function find_augmenting_path(source::Int, sink::Int, nodes::Int, flows::Matrix{Number}, capacities::Matrix{Number})::Union{Vector{Int}, Nothing}
-	function create_path(source::Int, sink::Int, parent::Int)::Vector{Int}
+function find_augmenting_path(source::Int, sink::Int, nodes::Int, flows::Matrix{Float64}, capacities::Matrix{Float64})::Union{Vector{Int}, Nothing}
+	function create_path(source::Int, sink::Int, parent::Vector{Int})::Vector{Int}
 		# creates a path from source to sink using parent list
 		node = sink
 		path = Vector{Int}([sink])
@@ -38,7 +38,7 @@ function find_augmenting_path(source::Int, sink::Int, nodes::Int, flows::Matrix{
 	return nothing # no augmenting path found
 end
   
-function max_path_flow(path::Vector{Int}, flows::Matrix{Number}, capacities::Matrix{Number})::Number
+function max_path_flow(path::Vector{Int}, flows::Matrix{Float64}, capacities::Matrix{Float64})::Number
 	# find max flow to send through a path
 	n = length(path)
 	flow = Inf
@@ -49,7 +49,7 @@ function max_path_flow(path::Vector{Int}, flows::Matrix{Number}, capacities::Mat
 	return flow
 end
   
-function send_flow!(path::Vector{Int}, flow::Number, flows::Matrix{Number})
+function send_flow!(path::Vector{Int}, flow::Number, flows::Matrix{Float64})
 	n = length(path)
 	for i in 2 : n
 		u, v = path[i - 1], path[i]
@@ -59,8 +59,21 @@ function send_flow!(path::Vector{Int}, flow::Number, flows::Matrix{Number})
 end
 
 
-function max_flow(source, sink, nodes, capacities)
-	flows = zeros()
+function max_flow(source::Int, sink::Int, nodes::Int, capacities::Matrix{Float64})
+	flows = zeros(Float64, (nodes, nodes))
+	tot_flow = 0
+	while true
+		path = find_augmenting_path(source, sink, nodes, flows, capacities)
+		if path == nothing
+			break
+		end
+		println(path)
+		aug_flow = max_path_flow(path, flows, capacities)
+		println(aug_flow)
+		tot_flow += aug_flow
+		send_flow!(path, aug_flow, flows)
+	end
+	return flows, tot_flow
 end
 
 
