@@ -1,28 +1,12 @@
 
-
-include("Oving12/Ov12.jl")
-
+using SpecialFunctions
 
 function main()
-	# c::Matrix{Float64} = [
-	# 	0	13	13	0	0	0	;
-	# 	0	0	0	14	0	0	;
-	# 	0	4	0	9	5	0	;
-	# 	0	0	0	0	0	4	;
-	# 	0	0	0	7	0	20	;
-	# 	0	0	0	0	0	0
-	# ]
-	
-	c::Matrix{Float64} = [
-		0	13	13	0	0	0	;
-		-13	0	-4	14	0	0	;
-		-13	4	0	9	12	0	;
-		0	-14	-9	0	-7	4	;
-		0	0	-12	7	0	20	;
-		0	0	0	-4	-20	0
-	]
-
-	println(find_trusted_cluster([2, 4], 4, [0.0 0.6 0.0 0.9; 0.2 0.0 0.3 1.0; 0.2 0.9 0.0 0.5; 0.9 0.1 0.3 0.0]))
+	a::BigFloat = BigFloat(pi, Int(1073741824 / 2))
+	s = string(a)
+	io = open("C:/Dev/test.txt", "w")
+	write(io, s)
+	close(io)
 end
 
 main()
