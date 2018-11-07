@@ -67,9 +67,7 @@ function max_flow(source::Int, sink::Int, nodes::Int, capacities::Matrix{Float64
 		if path == nothing
 			break
 		end
-		println(path)
 		aug_flow = max_path_flow(path, flows, capacities)
-		println(aug_flow)
 		tot_flow += aug_flow
 		send_flow!(path, aug_flow, flows)
 	end
@@ -88,5 +86,24 @@ function min_cut(source::Int, sink::Int, nodes::Int, capacities::Matrix{Float64}
 		end
 	end
 	return s, t
+end
+
+
+function find_trusted_cluster(trusted_peers, peers, network)
+	source = peers + 1
+	sink = peers + 2
+	capacities = zeros(Float64, (peers + 2, peers + 2))
+	capacities[1:peers, 1:peers] .= network
+	for i in 1 : peers
+		if i in trusted_peers
+			capacities[i, peers + 1] = -Inf
+			capacities[peers + 1, i] = Inf
+		else
+			capacities[i, peers + 2] = 1
+			capacities[peers + 2, i] = -1
+		end
+	end
+	cut = min_cut(source, sink, peers + 2, capacities)
+	return [i for i in cut[1] if i != source]
 end
 

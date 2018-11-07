@@ -22,7 +22,7 @@ function main()
 		0	0	0	-4	-20	0
 	]
 
-	println(min_cut(1, 6, 6, c))
+	println(find_trusted_cluster([2, 4], 4, [0.0 0.6 0.0 0.9; 0.2 0.0 0.3 1.0; 0.2 0.9 0.0 0.5; 0.9 0.1 0.3 0.0]))
 end
 
 main()
