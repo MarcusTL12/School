@@ -22,7 +22,7 @@ function main()
 		0	0	0	-4	-20	0
 	]
 
-	println(max_flow(1, 6, 6, c))
+	println(min_cut(1, 6, 6, c))
 end
 
 main()

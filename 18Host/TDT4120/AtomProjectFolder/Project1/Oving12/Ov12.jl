@@ -77,3 +77,16 @@ function max_flow(source::Int, sink::Int, nodes::Int, capacities::Matrix{Float64
 end
 
 
+function min_cut(source::Int, sink::Int, nodes::Int, capacities::Matrix{Float64})::Tuple{Vector{Int}, Vector{Int}}
+	flows, tot_flow = max_flow(source, sink, nodes, capacities)
+	s, t = Vector{Int}(undef, 0), Vector{Int}(undef, 0)
+	for i in 1 : nodes
+		if find_augmenting_path(source, i, nodes, flows, capacities) == nothing
+			push!(t, i)
+		else
+			push!(s, i)
+		end
+	end
+	return s, t
+end
+
