@@ -203,6 +203,24 @@ En god estimator må være forventningsrett og ha lavest mulig varians.
 \section*{d)}
 
 \begin{gather*}
-	x
+	X_0 - \bar X \sim n(0, \frac{\sigma^2}{n} + \sigma^2)
+	\\
+	Z = \frac{X_0 - \bar X}{\sqrt{\frac{\sigma^2}{n} + \sigma^2}} = \frac{X_0 - \bar X}{\sqrt{\sigma^2 \left(\frac{1}{n} + 1\right)}} \sim n(0, 1)
+	\\
+	T = \frac{X_0 - \bar X}{\sqrt{S^2 \left(\frac{1}{n} + 1\right)}} \sim t_{n - 1}
+	\\
+	P\left(-t_{n - 1, \alpha / 2} \leq T \leq t_{n - 1, \alpha / 2}\right) = 1 - \alpha
+	\\
+	-t_{n - 1, \alpha / 2} \leq \frac{X_0 - \bar X}{\sqrt{S^2 \left(\frac{1}{n} + 1\right)}} \leq -t_{n - 1, \alpha / 2}
+	\\
+	\bar X - t_{n - 1, \alpha / 2} \sqrt{S^2 \left(\frac{1}{n} + 1\right)} \leq X_0 \leq \bar X + t_{n - 1, \alpha / 2} \sqrt{S^2 \left(\frac{1}{n} + 1\right)}
+	\\
+	\bar X = 284, \quad n = 5, \quad \alpha = 0.05, \quad S^2 = 585.5, \quad t_{4, 0.025} = 2.776
+	\\
+	\left[284 - 2.776 \sqrt{585.5\left(\frac{1}{5} + 1\right)}, 284 + 2.776 \sqrt{585.5\left(\frac{1}{5} + 1\right)}\right] =
+	\\
+	\left[210.4, 357.6\right]
 \end{gather*}
+
+Dette intervallet er bredere siden det er snakk om usikkerheten til en enkeltmåling som i beste fall vil ha det reelle standardavviket, og blir enda bredere når en estimerer standardavviket fra 5 andre målinger. konfidensintervallet fra c) beskriver usikkerheten til gjennomsnittet som vil gå mot null ved flere målinger.
 

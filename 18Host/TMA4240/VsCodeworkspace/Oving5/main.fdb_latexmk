@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1541106836 "c:/Users/Marcus/Google Drive/__NTNU/18Host/TMA4240/VsCodeworkspace/Oving5/main.tex" "main.pdf" "main" 1541106837
-  "Dokumenter/oppg.tex" 1541106835 6599 84dc4b8e7a8fe878b6c3b116e6c81b3a ""
-  "c:/Users/Marcus/Google Drive/__NTNU/18Host/TMA4240/VsCodeworkspace/Oving5/main.tex" 1541079097 1533 b8e3c190b8975fbf27c112568229c5d8 ""
+["pdflatex"] 1541700415 "c:/Users/Marcus/Documents/Git/School/18Host/TMA4240/VsCodeworkspace/Oving5/main.tex" "main.pdf" "main" 1541700416
+  "Dokumenter/oppg.tex" 1541700414 7859 f89926288c5a8014af7369a25dacd5cf ""
+  "c:/Users/Marcus/Documents/Git/School/18Host/TMA4240/VsCodeworkspace/Oving5/main.tex" 1541079097 1533 b8e3c190b8975fbf27c112568229c5d8 ""
   "c:/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1535562381 3332 103109f5612ad95229751940c61aada0 ""
   "c:/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1535561740 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1535561740 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -189,9 +189,9 @@
   "c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1535563961 2913173 835908c48b80afa7b32e734440ec44e0 ""
   "c:/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1535564028 4217499 a530dc6519ebeff39b4774ad189d71f9 ""
   "c:/texlive/2018/texmf.cnf" 1535563946 673 4ae7b2f49cee444c5343a45b5d0f169c ""
-  "main.aux" 1541106837 48 ea0edd40bb803440fd484ba769ee030a ""
+  "main.aux" 1541700416 48 ea0edd40bb803440fd484ba769ee030a ""
   "main.tex" 1541079097 1533 b8e3c190b8975fbf27c112568229c5d8 ""
   (generated)
+  "main.aux"
   "main.pdf"
   "main.log"
-  "main.aux"

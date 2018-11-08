@@ -1,8 +1,8 @@
-PWD c:/Users/Marcus/Google Drive/__NTNU/18Host/TMA4240/VsCodeworkspace/Oving5
+PWD c:/Users/Marcus/Documents/Git/School/18Host/TMA4240/VsCodeworkspace/Oving5
 INPUT c:/texlive/2018/texmf.cnf
 INPUT c:/texlive/2018/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Marcus/Google Drive/__NTNU/18Host/TMA4240/VsCodeworkspace/Oving5/main.tex
+INPUT c:/Users/Marcus/Documents/Git/School/18Host/TMA4240/VsCodeworkspace/Oving5/main.tex
 OUTPUT main.log
 INPUT c:/texlive/2018/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2018/texmf-dist/tex/latex/base/article.cls
