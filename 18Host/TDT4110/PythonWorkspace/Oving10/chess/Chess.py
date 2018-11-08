@@ -188,3 +188,4 @@ def run():
         elif game.check(not turn):
             print("check!")
         turn = not turn
+
