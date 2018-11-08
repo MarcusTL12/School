@@ -224,3 +224,33 @@ En god estimator må være forventningsrett og ha lavest mulig varians.
 
 Dette intervallet er bredere siden det er snakk om usikkerheten til en enkeltmåling som i beste fall vil ha det reelle standardavviket, og blir enda bredere når en estimerer standardavviket fra 5 andre målinger. konfidensintervallet fra c) beskriver usikkerheten til gjennomsnittet som vil gå mot null ved flere målinger.
 
+
+\section*{Oppgave 5}
+
+\subsection*{a)}
+
+\begin{gather*}
+	P(Y > 110) = P\left(Z > \frac{10}{15}\right) = 0.2514
+	\\
+	P(90 < Y < 110) = 1 - P(Y > 110) - P(Y < 90) = 1 - 2 \cdot 0.2514 = 0.4972
+	\\
+	\\
+	X = \frac{Y_1}{Y_2}
+	\\
+	f_X(x) =
+	\frac{1}{225} \cdot \frac{e^{-\frac{400}{9}}}{\frac{\pi}{225}(x^2 + 1)}
+	+
+	\\
+	\frac{1}{225} \left(\frac{4}{9} x + \frac{4}{9}\right) \left(
+		\frac{1}{2} \text{erf}\left(\frac{15}{2} \sqrt{2} \frac{\frac{4}{9} x + \frac{4}{9}}{\sqrt{x^2 + 1}}\right)
+		-
+		\frac{1}{2} \text{erf}\left(-\frac{15}{2} \sqrt{2} \frac{\frac{4}{9} x + \frac{4}{9}}{\sqrt{x^2 + 1}}\right)
+	\right)
+	\cdot \frac{e^{\frac{-200 x^2 + 400 x - 200}{9 x^2 + 9}}}{\sqrt{2 \pi}\left(\frac{1}{15} \sqrt{x^2 + 1}\right)}
+	\\
+	\\
+	F(0.5) + (1 - F(2)) = 0.002869
+\end{gather*}
+
+Var koselig å lese på cauchy fordeling og forholdsfordeling i et par timer, men føler det burde være en enklere måte å løse siste punktet i a...
+
