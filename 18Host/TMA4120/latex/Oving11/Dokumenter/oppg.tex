@@ -3,3 +3,170 @@
 \end{center}
 
 
+\section*{15.2.16}
+
+
+\begin{gather*}
+	a_n = \frac{(3 n)!}{2^n (n!)^3},
+	\qquad
+	a_{n + 1} = \frac{\left(3 (n + 1)\right)!}{2^{n + 1} \left((n + 1)!\right)^3}
+	=
+	\frac{(3n + 1)(3n + 2)(3n + 1)(3 n)!}{2 \cdot 2^n (n + 1)^3 (n!)^3}
+	\\
+	\\
+	\frac{a_{n + 1}}{a_n} = \frac{2^n (n!)^3}{(3 n)!}
+	\cdot
+	\frac{(3n + 1)(3n + 2)(3n + 1)(3 n)!}{2 \cdot 2^n (n + 1)^3 (n!)^3}
+	=
+	\frac{1}{2} \cdot \frac{(3n + 1)(3n + 2)(3n + 1)}{(n + 1)^3}
+	\\
+	\\
+	\lim_{n \rightarrow \infty}{\frac{1}{2} \cdot \frac{(3n + 1)(3n + 2)(3n + 1)}{(n + 1)^3}} = \frac{27}{2} \Rightarrow
+	\\
+	\text{Center: } z = 0,
+	\qquad
+	\text{Radius: } R = \frac{2}{27} \approx 0.074
+\end{gather*}
+
+
+\section*{15.3}
+
+\subsection*{12}
+
+
+\begin{gather*}
+	\frac{2 n (2 n - 1)}{n^n} z^{2n - 2} = \left(\frac{1}{n^n} z^{2n}\right)''
+	\\
+	\\
+	\frac{1}{n^n} z^{2n} = b_n z^{2 n} = b_n w^n,
+	\quad
+	w = z^2
+	\\
+	\\
+	\frac{b_{n + 1}}{b_n} = \frac{n^n}{(n + 1)^{n + 1}}
+	=
+	\frac{1}{n + 1} \left( \frac{n}{n + 1} \right)^n
+	=
+	\frac{1}{n + 1} \left( 1 + \frac{1}{n} \right)^{-n}
+	\\
+	\\
+	\lim_{n \rightarrow \infty}{\frac{1}{n + 1} \left( 1 + \frac{1}{n} \right)^{-n}} = \frac{1}{\infty} \cdot e^{-1} = 0
+	\\
+	\\
+	R_w = \infty \Rightarrow R_z = \sqrt{\infty} = \infty
+	\\
+	\\
+	\frac{2 n (2 n - 1)}{n^n} z^{2n - 2} = a_n z^{2 n} \cdot z^2 = a_n w^n \cdot w, \quad w = z^2
+	\\
+	\\
+	\frac{a_{n + 1}}{a_n} = \frac{(2n + 2)(2n + 1)}{2n(2n - 1) (n + 1)} \left( 1 + \frac{1}{n} \right)^{-n} \sim \frac{1}{n} \rightarrow 0
+	\\
+	R_w = \infty \Rightarrow R_z = \infty
+\end{gather*}
+
+
+\subsection*{16}
+
+
+\begin{gather*}
+	f(z) = a_0 + a_1 z + a_2 z^2 + a_3 z^3 + ...
+	\\
+	f(-z) = a_0 - a_1 z + a_2 z^2 - a_3 z^3 + ...
+	\\
+	f(z) - f(-z) = 0 = 2 a_1 z + 2 a_3 z^3 + ... \Rightarrow a_{2n + 1} = 0
+	\\
+	\\
+	\cos{z} = \sum_{n \text{ even}}^\infty{\frac{(-1)^{\frac{n}{2}}}{n!} z^{n}}
+\end{gather*}
+
+
+\section*{15.4}
+
+\subsection*{3}
+
+
+\begin{gather*}
+	\sin{z} = \sum_{n = 0}^{\infty}{\frac{(-1)^n}{(2 n + 1)!} z^{2n + 1}}
+	\\
+	\sin{\frac{z^2}{2}} = \sum_{n = 0}^\infty{\frac{(-1)^n}{(2n + 1)!} \left( \frac{z^2}{2} \right)^{2 n + 1}}
+	\\
+	\\
+	\frac{(-1)^n}{(2n + 1)!} \left( \frac{z^2}{2} \right)^{2 n + 1}
+	=
+	\frac{(-1)^n}{(2n + 1)! \cdot 2^{2n + 1}} z^{4 n + 2}
+	=
+	a_n z^{4n + 2}
+	\\
+	\abs{a_{n + 1}} = \frac{1}{(2n + 3)! 2^{2n + 3}} = \frac{1}{4 (2n + 3)(2n + 2)(2n + 1)! \cdot 2^{2n + 1}}
+	\\
+	\abs{\frac{a_{n + 1}}{a_n}} = \frac{1}{(2n + 3)! 2^{2n + 3}} = \frac{1}{4 (2n + 3)(2n + 2)} \rightarrow 0
+	\\
+	\\
+	\sin{\frac{z^2}{2}} = \sum_{n = 0}^\infty{\frac{(-1)^n}{(2n + 1)! \cdot 2^{2n + 1}} z^{4 n + 2}} \quad \forall \quad z \in \mathbb{C}
+\end{gather*}
+
+
+\subsection*{13}
+
+
+\begin{gather*}
+	e^{z} = \sum_{n = 0}^\infty{\frac{z^n}{n!}},
+	\quad
+	e^{-z^2} = \sum_{n = 0}^\infty{\frac{(-z^2)^n}{n!}} = \sum_{n = 0}^\infty{\frac{(-1)^n z^{2n}}{n!}}
+	\\
+	\\
+	\frac{2}{\sqrt{\pi}} \int_0^z{e^{-t^2} dt} = \frac{2}{\sqrt{\pi}} \sum_{n = 0}^\infty{\frac{(-1)^n z^{2n + 1}}{n! (2n + 1)}}
+\end{gather*}
+
+
+\subsection*{24}
+
+
+\begin{gather*}
+	e^{z - 1} = e^{-1} \cdot e^z = \sum_{n = 0}^\infty{\frac{(z - 1)^n}{n!}} \quad \forall \quad z \in \mathbb{C}
+	\\
+	e^{z} = e \sum_{n = 0}^\infty{\frac{(z - 1)^n}{n!}}
+	\\
+	\\
+	e^{z(z - 2)} = e^{z} = e \sum_{n = 0}^\infty{\frac{(z(z - 2) - 1)^n}{n!}}
+\end{gather*}
+
+
+\section*{15.5}
+
+\subsection*{5}
+
+
+\begin{gather*}
+	\text{Power series are uniformely convergen for all z within the radius of convergence.}
+	\\
+	\\
+	a_n = {n \choose 2} = \frac{n!}{(n - 2)! \cdot 2}
+	\\
+	\\
+	a_{n + 1} = \frac{(n + 1)!}{(n - 1)! \cdot 2} = \frac{n + 1}{n - 1} \cdot \frac{n!}{(n - 2)! \cdot 2}
+	\\
+	\\
+	\frac{a_{n + 1}}{a_n} = \frac{n + 1}{n - 1} \rightarrow 1 \Rightarrow R_{4 z} = 1 \Rightarrow R_z = \frac{1}{4}
+	\\
+	\\
+	\text{Uniformely convergen for all } z \text{ such that } \abs{z + \frac{i}{2}} < \frac{1}{4}
+\end{gather*}
+
+
+\subsection*{15}
+
+
+\begin{gather*}
+	\text{Series is power series, so have to check radius of convergence.}
+	\\
+	\\
+	a_n = \frac{(n!)^2}{(2n)!},
+	\quad
+	a_{n + 1} = \frac{((n + 1)!)^2}{(2(n + 1))!} = \frac{(n + 1)^2}{(2n + 2)(2n + 1)} \cdot \frac{(n!)^2}{(2n)!}
+	\\
+	\frac{a_{n + 1}}{a_n} = \frac{(n + 1)^2}{(2n + 2)(2n + 1)} \rightarrow \frac{1}{4} \Rightarrow R = 4 > 3 \Rightarrow
+	\\
+	\text{Series is uniformely convergent in disk of radius 3}
+\end{gather*}
+
