@@ -1,12 +1,11 @@
 
-using SpecialFunctions
+
+include("Oving13/Ov13.jl")
+
 
 function main()
-	a::BigFloat = BigFloat(pi, Int(1073741824 / 2))
-	s = string(a)
-	io = open("C:/Dev/test.txt", "w")
-	write(io, s)
-	close(io)
+
+	println(certifysubsetsum_long([3, 5], [14, 23, 18, 2, 4], 22))
 end
 
 main()
