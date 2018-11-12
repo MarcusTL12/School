@@ -1,0 +1,32 @@
+Øving 9:
+a)
+Sender en ny.
+
+b)
+Båndbredde, latency og jitter
+
+c)
+Distributed Denial of Service - angrep
+Du får et fordelt netverk av maskiner til å sende netverksforespørsler til samme nettside/server slik at den blir overbelastet og ingen får tilgang
+
+d)
+Virtual Private Network. Dette router netverkstrafikken (Ofte kryptert) gjennom en annen server, mulig plassert i et annet land med snillere lover.
+
+e)
+Rivest–Shamir–Adleman
+Det er et asymetrisk krypteringssystem hvor det benyttes en nøkkel for å kryptere (Public) og en for å dekryptere (Private) meldingen.
+
+Øving 10:
+
+a)
+En algorithme er en prosedyre som basert på input data gjør valg og manipulerer data for å produsere korresponderende output.
+
+b)
+O-notasjon gir en øvre grense på asymptotisk kjøretid. O(n^2) betyr at algorithmens kjøretid er maksimalt proporsjonal med inputstørrelsen i andre når n blir tilstrekkelig stor
+
+c)
+n log n, n^2, n^3, 2^n
+
+d)
+En rekursiv algorithme deler problemet opp i mindre tilsvarende delproblemer som den så løser med å kjøre en ny instanse av den samme algorithmen på delproblemet
+helt til en når et grunntilfelle. En iterativ algorithme kjører hele prosedyren uten å kjøre seg selv.
