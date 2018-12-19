@@ -7,24 +7,24 @@ I en redokstitrering reagerer stoffene som titreres mot hverandre i en redoksrea
 Jodometri er en form for redokstitrering hvor jod brukes som reduksjonsmiddel. Analytten reduseres i et overskudd av jodid. En mye brukt indikator i jodometri er stivelse.\cite{snljodometri} Selv ved meget små mengder jod i løsningen vil tilsetting av stivelse gi en sterk blåfarge\cite{snljod}. Reaksjonsligning for jodometrisk titrering av kobber er:
 
 \begin{subequations}
-    \begin{equation}
-        \chemfig{2Cu^{2+}} + \chemfig{3I^{-}} \rightleftharpoons \chemfig{2Cu^{+}} + \chemfig{I_3^{-}}
-    \end{equation}
-    \begin{equation}
-        \chemfig{2Cu^{2+}} + \chemfig{2I^{-}} \rightleftharpoons \chemfig{2CuI}
-    \end{equation}
+	\begin{equation}
+		\chemfig{2Cu^{2+}} + \chemfig{3I^{-}} \rightleftharpoons \chemfig{2Cu^{+}} + \chemfig{I_3^{-}}
+	\end{equation}
+	\begin{equation}
+		\chemfig{2Cu^{2+}} + \chemfig{2I^{-}} \rightleftharpoons \chemfig{2CuI}
+	\end{equation}
 \end{subequations}
 
 Den resulterende konsentrasjonen av jod (opptrer som \chemfig{I_3^{-}} i overskudd av jodid) kan bestemmes ved å titrere mot en standard av natriumtiosulfat (\chemfig{Na_2S_2O_3}). Kobberjodid felles ut av løsningen og oksideres ikke tilbake av tiosulfaten. Reaksjonligning for dette samt totalreaksjon for titreringen blir:
 
 \begin{subequations}
-    \begin{equation}
-        \chemfig{I_3^{-}} + 2 \chemfig{S_2 O_3^{2-}} + 2 \chemfig{I^{-}} + \chemfig{S_4 O_6^{2-}}
-    \end{equation}
-    \begin{equation}
-        2 \chemfig{Cu^{2+}} + 2 \chemfig{S_2 O_3^{2-}} + 2 \chemfig{I^{-}} \rightarrow
-        2 \chemfig{CuI} + \chemfig{S_4 O_6^{2-}}
-    \end{equation}
+	\begin{equation}
+		\chemfig{I_3^{-}} + 2 \chemfig{S_2 O_3^{2-}} + 2 \chemfig{I^{-}} + \chemfig{S_4 O_6^{2-}}
+	\end{equation}
+	\begin{equation}
+		2 \chemfig{Cu^{2+}} + 2 \chemfig{S_2 O_3^{2-}} + 2 \chemfig{I^{-}} \rightarrow
+		2 \chemfig{CuI} + \chemfig{S_4 O_6^{2-}}
+	\end{equation}
 \end{subequations}
 
 \subsubsection{Instilling av standard}
@@ -32,13 +32,13 @@ Den resulterende konsentrasjonen av jod (opptrer som \chemfig{I_3^{-}} i oversku
 Natriumtiosulfat er ikke en god standardløsning og må instilles mot en primærstandard av kaliumjodat (\chemfig{K IO_3}). I surt miljø vil kaliumjodat reagere i overskudd av jodid til jod (trijodid) som tiosulfatstandarden kan titreres mot\cite{analyticalchem2014}. Reaksjonene for denne titreringen blir:
 
 \begin{subequations}
-    \begin{equation}
-        \chemfig{IO_3^{-}} + 8\chemfig{I^{-}} + 6\chemfig{H^{+}} \rightleftharpoons 3\chemfig{I_3^{-}} + 3\chemfig{H_2O}
-    \end{equation}
-    \begin{equation}
-        3\chemfig{I_3^{-}} + 6\chemfig{S_2O_3^{2-}} \rightleftharpoons 9\chemfig{I^{-}} + 3\chemfig{S_4O_6^{2-}}
-    \end{equation}
-    \label{eq:instill}
+	\begin{equation}
+		\chemfig{IO_3^{-}} + 8\chemfig{I^{-}} + 6\chemfig{H^{+}} \rightleftharpoons 3\chemfig{I_3^{-}} + 3\chemfig{H_2O}
+	\end{equation}
+	\begin{equation}
+		3\chemfig{I_3^{-}} + 6\chemfig{S_2O_3^{2-}} \rightleftharpoons 9\chemfig{I^{-}} + 3\chemfig{S_4O_6^{2-}}
+	\end{equation}
+	\label{eq:instill}
 \end{subequations}
 
 \subsubsection{Potensielle bireaksjoner ved jodometrisk titrering}
@@ -46,29 +46,32 @@ Natriumtiosulfat er ikke en god standardløsning og må instilles mot en primær
 \chemfig{CO_2} er lettløselig i vann og danner karbonsyre \cite{snlCO2}, som vist i likning \ref{eq:CO2_i_vann}. Karbonsyra gir en svakt sur løsning ved at den spaltes og danner \chemfig{H^+}-ioner (likning \ref{syrelikevekt}). I surt miljø vil oksygen fra luft kunne redusere jodioner til jod, vist i likning \ref{O2_reduserer_jod}, derfor brukes \chemfig{CO_2}-fritt vann i jodometriske titreringer.
 
 \begin{subequations}
-    \begin{equation}
-        \chemfig{CO_2} + \chemfig{H_2 O} \rightleftharpoons \chemfig{H_2 CO_3}
-        \label{eq:CO2_i_vann}
-    \end{equation}
-    \begin{equation}
-        \chemfig{H_2 CO_3} \rightleftharpoons \chemfig{H^{+}} + \chemfig{HCO_3^{-}}
-        \label{syrelikevekt}
-    \end{equation}
-    \begin{equation}
-        4 \chemfig{I^{-}} + \chemfig{O_2} + 4 \chemfig{H^{+}} \rightarrow 2 \chemfig{I_2} + 2 \chemfig{H_2 O}
-        \label{O2_reduserer_jod}
-    \end{equation}
+	\begin{equation}
+		\chemfig{CO_2} + \chemfig{H_2 O} \rightleftharpoons \chemfig{H_2 CO_3}
+		\label{eq:CO2_i_vann}
+	\end{equation}
+	\begin{equation}
+		\chemfig{H_2 CO_3} \rightleftharpoons \chemfig{H^{+}} + \chemfig{HCO_3^{-}}
+		\label{syrelikevekt}
+	\end{equation}
+	\begin{equation}
+		4 \chemfig{I^{-}} + \chemfig{O_2} + 4 \chemfig{H^{+}} \rightarrow 2 \chemfig{I_2} + 2 \chemfig{H_2 O}
+		\label{O2_reduserer_jod}
+	\end{equation}
 \end{subequations}
 
 Reaksjon \ref{hypojoditt} viser at jod i basisk løsning kan danne hypojoditt, \chemfig{HIO}. Dette stoffet er lite stabilt og spaltes raskt videre til jodid og jodat, som vist i likning \ref{eq:hypojodit}.\cite{snljodoksosyrer} For å unngå dannelse av hypojoditt må jodtitrering utføres med nøytral eller svakt sur løsning\cite{snljodimetri}.
 
 \begin{subequations}
-    \begin{equation}
-        \chemfig{I_2} + \chemfig{OH^{-}} \rightleftharpoons \chemfig{IO^{-}} + \chemfig{I^{-}} + \chemfig{H^{+}}
-        \label{hypojoditt}
-    \end{equation}
-    \begin{equation}
-        3\chemfig{IO^{-}} \rightleftharpoons \chemfig{IO_3^{-}} + 2\chemfig{I^{-}}
-    \end{equation}
-    \label{eq:hypojodit}
+	\begin{equation}
+		\chemfig{I_2} + \chemfig{OH^{-}} \rightleftharpoons \chemfig{IO^{-}} + \chemfig{I^{-}} + \chemfig{H^{+}}
+		\label{hypojoditt}
+	\end{equation}
+	\begin{equation}
+		3\chemfig{IO^{-}} \rightleftharpoons \chemfig{IO_3^{-}} + 2\chemfig{I^{-}}
+	\end{equation}
+	\label{eq:hypojodit}
 \end{subequations}
+
+
+\input{Dokumenter/Spesialoppgave/teori.tex}

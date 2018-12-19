@@ -1,18 +1,20 @@
 # Fdb version 3
-["bibtex main"] 1545227781 "main.aux" "main.bbl" "main" 1545227784
+["bibtex main"] 1545230631 "main.aux" "main.bbl" "main" 1545230635
   "bibliografi.bib" 1545223252 4889 da1a020259c78584058fe894cca0805e ""
   "c:/texlive/2018/texmf-dist/bibtex/bst/base/ieeetr.bst" 1535561905 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "main.aux" 1545227783 7918 ffcc8ba32f646e859ff17e18ffd04776 ""
+  "main.aux" 1545230634 9055 d20d35b109ad438cac87beb310550d54 ""
   (generated)
-  "main.blg"
   "main.bbl"
-["pdflatex"] 1545227781 "c:/Users/Marcus/Documents/Git/School/18Host/KJ2050/Spesialoppgave/main.tex" "main.pdf" "main" 1545227784
-  "Dokumenter/diskusjon.tex" 1545223252 5191 770c656addd375da5fed8723bfd4f043 ""
+  "main.blg"
+["pdflatex"] 1545230632 "c:/Users/Marcus/Documents/Git/School/18Host/KJ2050/Spesialoppgave/main.tex" "main.pdf" "main" 1545230635
+  "Dokumenter/Spesialoppgave/diskusjon.tex" 1545230628 285 6902254e7e4769ca7053d2585191bbeb ""
+  "Dokumenter/Spesialoppgave/teori.tex" 1545230184 213 cbe43467b0764b56f625dd914ffa81e5 ""
+  "Dokumenter/diskusjon.tex" 1545230134 5240 fc76dd09e55aabf3c4e2c23d3268f257 ""
   "Dokumenter/eksperimentelt.tex" 1545223252 1677 0beb4ee5050aa4d3f928bac07d2a1bad ""
   "Dokumenter/rapport.tex" 1545223252 372 26cc835cada17e6b27f3a00985edf72b ""
   "Dokumenter/resultater.tex" 1545223252 1464 7fb1c43494551c9721caec1d985357d0 ""
   "Dokumenter/sammendrag.tex" 1545223252 436 67b70e43082577c4cfe98ef8a1b9c791 ""
-  "Dokumenter/teori.tex" 1545223252 4133 7cc67f97503f4d4ffac36099ecd71179 ""
+  "Dokumenter/teori.tex" 1545229709 4011 445b470f9f92c1a75ce2e333c24adbca ""
   "Dokumenter/vedlegg.tex" 1545223252 3801 dd0fc372dc0e006dea29753e7aa935c3 ""
   "c:/Users/Marcus/Documents/Git/School/18Host/KJ2050/Spesialoppgave/main.tex" 1545227772 4960 4b5d4b750c545e82441abf138f206c88 ""
   "c:/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1535562022 2971 def0b6c1f0b107b3b936def894055589 ""
@@ -220,13 +222,13 @@
   "c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1535563961 2913173 835908c48b80afa7b32e734440ec44e0 ""
   "c:/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1535564028 4217499 a530dc6519ebeff39b4774ad189d71f9 ""
   "c:/texlive/2018/texmf.cnf" 1535563946 673 4ae7b2f49cee444c5343a45b5d0f169c ""
-  "main.aux" 1545227783 7918 ffcc8ba32f646e859ff17e18ffd04776 ""
-  "main.bbl" 1545227781 1031 75c0feea0b6928d5a862661b9b16549b "bibtex main"
-  "main.out" 1545227783 977 8ef93d6833dcdcbbd6219f6b1eb39843 ""
+  "main.aux" 1545230634 9055 d20d35b109ad438cac87beb310550d54 ""
+  "main.bbl" 1545230632 1031 75c0feea0b6928d5a862661b9b16549b "bibtex main"
+  "main.out" 1545230634 1809 b5c57a5885330719ee6b6b6197a6de97 ""
   "main.tex" 1545227772 4960 4b5d4b750c545e82441abf138f206c88 ""
   "nul" 0 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
-  "main.aux"
   "main.log"
   "main.pdf"
+  "main.aux"
   "main.out"

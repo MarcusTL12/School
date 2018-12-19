@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.8.29)  19 DEC 2018 14:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.8.29)  19 DEC 2018 15:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1218,33 +1218,36 @@ l.47
      ]pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.49     \begin{equation}
-                         pdfTeX warning (ext4): destination with the same identifier (name{equation.1.2}) has been already used, duplicate ignored
+l.49 	\begin{equation}
+                      pdfTeX warning (ext4): destination with the same identifier (name{equation.1.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.53     \begin{equation}
-                         pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3}) has been already used, duplicate ignored
+l.53 	\begin{equation}
+                      pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.57     \begin{equation}
-                         pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1}) has been already used, duplicate ignored
+l.57 	\begin{equation}
+                      pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.66     \begin{equation}
-                         pdfTeX warning (ext4): destination with the same identifier (name{equation.1.2}) has been already used, duplicate ignored
+l.66 	\begin{equation}
+                      pdfTeX warning (ext4): destination with the same identifier (name{equation.1.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.70     \begin{equation}
-                         ) (./Dokumenter/eksperimentelt.tex
+l.70 	\begin{equation}
+                       (./Dokumenter/Spesialoppgave/teori.tex)) (./Dokumenter/eksperimentelt.tex
 Overfull \hbox (4.76079pt too wide) in paragraph at lines 5--6
 \T1/cmr/m/n/10 Natriumtiosulfat ([]) (7,9939$\OMS/cmsy/m/n/10 ^^F$\T1/cmr/m/n/10 0,0001[], vann-fri) og ka-li-umjodat ([]) (1,3006$\OMS/cmsy/m/n/10 ^^F$\T1/cmr/m/n/10 0,0001[])
  []
 
-) (./Dokumenter/resultater.tex [2]) (./Dokumenter/diskusjon.tex [3])) (./main.bbl
+) (./Dokumenter/resultater.tex [2]) (./Dokumenter/diskusjon.tex [3] (./Dokumenter/Spesialoppgave/diskusjon.tex))) (./main.bbl
+Underfull \vbox (badness 3803) has occurred while \output is active []
+
+ [4]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 10.
  (c:/texlive/2018/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [4]) [5] (./Dokumenter/vedlegg.tex
+)) [5] (./Dokumenter/vedlegg.tex
 Underfull \hbox (badness 10000) in paragraph at lines 31--43
 
  []
@@ -1321,21 +1324,21 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 115.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8EF93D6833DCDCBBD6219F6B1EB39843;977.
+(rerunfilecheck)             Checksum: B5C57A5885330719EE6B6B6197A6DE97;1809.
  ) 
 Here is how much of TeX's memory you used:
- 33073 strings out of 492642
- 631588 string characters out of 6133162
- 721055 words of memory out of 5000000
- 36449 multiletter control sequences out of 15000+600000
+ 33096 strings out of 492642
+ 632106 string characters out of 6133162
+ 720057 words of memory out of 5000000
+ 36458 multiletter control sequences out of 15000+600000
  546699 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,19n,92p,1130b,850s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,19n,92p,1130b,840s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (7 pages, 293827 bytes).
+Output written on main.pdf (7 pages, 297494 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 194 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
- 117 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 262 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 189 words of extra memory for PDF output out of 10000 (max. 10000000)
 

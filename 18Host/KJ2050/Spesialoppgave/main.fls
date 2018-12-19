@@ -322,6 +322,8 @@ INPUT c:/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
 INPUT c:/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ecrm0700.tfm
 INPUT c:/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm
 INPUT c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT Dokumenter/Spesialoppgave/teori.tex
+INPUT Dokumenter/Spesialoppgave/teori.tex
 INPUT Dokumenter/eksperimentelt.tex
 INPUT Dokumenter/eksperimentelt.tex
 INPUT Dokumenter/resultater.tex
@@ -331,6 +333,8 @@ INPUT c:/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
 INPUT c:/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ecbx0800.tfm
 INPUT Dokumenter/diskusjon.tex
 INPUT Dokumenter/diskusjon.tex
+INPUT Dokumenter/Spesialoppgave/diskusjon.tex
+INPUT Dokumenter/Spesialoppgave/diskusjon.tex
 INPUT main.bbl
 INPUT main.bbl
 INPUT c:/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ecti1000.tfm
