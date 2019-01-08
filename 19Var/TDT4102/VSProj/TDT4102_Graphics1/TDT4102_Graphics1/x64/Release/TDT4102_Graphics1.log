@@ -1,0 +1,6 @@
+﻿  main.cpp
+c:\program files\tdt4102\graph_lib\graph\graph.h(598): warning C26451: Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).
+c:\program files\tdt4102\graph_lib\graph\graph.h(598): warning C26451: Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).
+c:\program files\tdt4102\graph_lib\graph\graph.h(603): warning C26451: Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).
+c:\program files\tdt4102\graph_lib\graph\graph.h(603): warning C26451: Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).
+c:\program files\tdt4102\graph_lib\graph\gui.h(35): warning C26495: Variable 'Graph_lib::Widget::pw' is uninitialized. Always initialize a member variable (type.6).
