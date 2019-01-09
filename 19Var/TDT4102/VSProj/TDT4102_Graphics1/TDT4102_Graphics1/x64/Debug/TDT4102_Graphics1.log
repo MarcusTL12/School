@@ -6,3 +6,5 @@ c:\program files\tdt4102\graph_lib\graph\graph.h(189): warning C4267: 'return': 
 c:\program files\tdt4102\graph_lib\graph\graph.h(166): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
   c:\program files\tdt4102\graph_lib\graph\graph.h(164): note: while compiling class template member function 'Graph_lib::Vector_ref<Graph_lib::Button>::~Vector_ref(void)'
   c:\program files\tdt4102\graph_lib\graph\gui.h(114): note: see reference to function template instantiation 'Graph_lib::Vector_ref<Graph_lib::Button>::~Vector_ref(void)' being compiled
+     Creating library C:\Users\Marcus\Documents\Git\School\19Var\TDT4102\VSProj\TDT4102_Graphics1\x64\Debug\TDT4102_Graphics1.lib and object C:\Users\Marcus\Documents\Git\School\19Var\TDT4102\VSProj\TDT4102_Graphics1\x64\Debug\TDT4102_Graphics1.exp
+  TDT4102_Graphics1.vcxproj -> C:\Users\Marcus\Documents\Git\School\19Var\TDT4102\VSProj\TDT4102_Graphics1\x64\Debug\TDT4102_Graphics1.exe
