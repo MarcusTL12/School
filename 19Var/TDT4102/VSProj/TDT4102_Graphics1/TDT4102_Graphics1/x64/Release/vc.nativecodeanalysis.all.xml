@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\tdt4102\graph_lib\graph</FILEPATH>
+      <FILENAME>graph.h</FILENAME>
+      <LINE>598</LINE>
+      <COLUMN>45</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Graph_lib::Ellipse::focus1</FUNCTION>
+    <DECORATED>?focus1@Ellipse@Graph_lib@@QEBA?AUPoint@2@XZ</DECORATED>
+    <FUNCLINE>596</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\tdt4102\graph_lib\graph</FILEPATH>
+      <FILENAME>graph.h</FILENAME>
+      <LINE>598</LINE>
+      <COLUMN>41</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Graph_lib::Ellipse::focus1</FUNCTION>
+    <DECORATED>?focus1@Ellipse@Graph_lib@@QEBA?AUPoint@2@XZ</DECORATED>
+    <FUNCLINE>596</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\tdt4102\graph_lib\graph</FILEPATH>
+      <FILENAME>graph.h</FILENAME>
+      <LINE>603</LINE>
+      <COLUMN>45</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Graph_lib::Ellipse::focus2</FUNCTION>
+    <DECORATED>?focus2@Ellipse@Graph_lib@@QEBA?AUPoint@2@XZ</DECORATED>
+    <FUNCLINE>601</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\tdt4102\graph_lib\graph</FILEPATH>
+      <FILENAME>graph.h</FILENAME>
+      <LINE>603</LINE>
+      <COLUMN>41</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Graph_lib::Ellipse::focus2</FUNCTION>
+    <DECORATED>?focus2@Ellipse@Graph_lib@@QEBA?AUPoint@2@XZ</DECORATED>
+    <FUNCLINE>601</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\tdt4102\graph_lib\graph</FILEPATH>
+      <FILENAME>gui.h</FILENAME>
+      <LINE>35</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Graph_lib::Widget::pw' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Graph_lib::Widget::{ctor}</FUNCTION>
+    <DECORATED>??0Widget@Graph_lib@@QEAA@UPoint@1@HHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@P6AXPEAX2@Z@Z</DECORATED>
+    <FUNCLINE>35</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>

@@ -1,0 +1,8 @@
+﻿  main.cpp
+c:\program files\tdt4102\graph_lib\graph\graph.h(189): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  c:\program files\tdt4102\graph_lib\graph\graph.h(188): note: while compiling class template member function 'int Graph_lib::Vector_ref<Graph_lib::Button>::size(void) const'
+  c:\program files\tdt4102\graph_lib\graph\gui.h(124): note: see reference to function template instantiation 'int Graph_lib::Vector_ref<Graph_lib::Button>::size(void) const' being compiled
+  c:\program files\tdt4102\graph_lib\graph\gui.h(116): note: see reference to class template instantiation 'Graph_lib::Vector_ref<Graph_lib::Button>' being compiled
+c:\program files\tdt4102\graph_lib\graph\graph.h(166): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  c:\program files\tdt4102\graph_lib\graph\graph.h(164): note: while compiling class template member function 'Graph_lib::Vector_ref<Graph_lib::Button>::~Vector_ref(void)'
+  c:\program files\tdt4102\graph_lib\graph\gui.h(114): note: see reference to function template instantiation 'Graph_lib::Vector_ref<Graph_lib::Button>::~Vector_ref(void)' being compiled
