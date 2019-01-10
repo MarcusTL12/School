@@ -2,7 +2,10 @@
 
 int main()
 {
-	cout << "hei" << std::endl;
-
-	return 0;
+	if (false)
+		cout << 1;
+	else if (true)
+		cout << 2;
+	else
+		cout << 3;
 }
