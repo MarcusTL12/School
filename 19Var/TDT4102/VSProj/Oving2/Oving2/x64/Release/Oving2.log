@@ -1,0 +1,26 @@
+﻿  loan_drawer.cpp
+c:\program files\tdt4102\graph_lib\graph\graph.h(189): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  c:\program files\tdt4102\graph_lib\graph\graph.h(188): note: while compiling class template member function 'int Graph_lib::Vector_ref<Graph_lib::Button>::size(void) const'
+  c:\program files\tdt4102\graph_lib\graph\gui.h(124): note: see reference to function template instantiation 'int Graph_lib::Vector_ref<Graph_lib::Button>::size(void) const' being compiled
+  c:\program files\tdt4102\graph_lib\graph\gui.h(116): note: see reference to class template instantiation 'Graph_lib::Vector_ref<Graph_lib::Button>' being compiled
+c:\program files\tdt4102\graph_lib\graph\graph.h(166): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  c:\program files\tdt4102\graph_lib\graph\graph.h(164): note: while compiling class template member function 'Graph_lib::Vector_ref<Graph_lib::Button>::~Vector_ref(void)'
+  c:\program files\tdt4102\graph_lib\graph\gui.h(114): note: see reference to function template instantiation 'Graph_lib::Vector_ref<Graph_lib::Button>::~Vector_ref(void)' being compiled
+  main.cpp
+c:\users\marcus\documents\git\school\19var\tdt4102\vsproj\oving2\oving2\main.cpp(4): warning C4309: 'initializing': truncation of constant value
+c:\users\marcus\documents\git\school\19var\tdt4102\vsproj\oving2\oving2\main.cpp(115): warning C4309: 'initializing': truncation of constant value
+c:\users\marcus\documents\git\school\19var\tdt4102\vsproj\oving2\oving2\main.cpp(116): warning C4309: 'initializing': truncation of constant value
+c:\users\marcus\documents\git\school\19var\tdt4102\vsproj\oving2\oving2\main.cpp(117): warning C4309: 'initializing': truncation of constant value
+c:\users\marcus\documents\git\school\19var\tdt4102\vsproj\oving2\oving2\main.cpp(209): warning C4244: '-=': conversion from 'double' to 'int', possible loss of data
+c:\users\marcus\documents\git\school\19var\tdt4102\vsproj\oving2\oving2\main.cpp(243): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\program files\tdt4102\graph_lib\graph\graph.h(189): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  c:\program files\tdt4102\graph_lib\graph\graph.h(188): note: while compiling class template member function 'int Graph_lib::Vector_ref<Graph_lib::Button>::size(void) const'
+  c:\program files\tdt4102\graph_lib\graph\gui.h(124): note: see reference to function template instantiation 'int Graph_lib::Vector_ref<Graph_lib::Button>::size(void) const' being compiled
+  c:\program files\tdt4102\graph_lib\graph\gui.h(116): note: see reference to class template instantiation 'Graph_lib::Vector_ref<Graph_lib::Button>' being compiled
+c:\program files\tdt4102\graph_lib\graph\graph.h(166): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  c:\program files\tdt4102\graph_lib\graph\graph.h(164): note: while compiling class template member function 'Graph_lib::Vector_ref<Graph_lib::Button>::~Vector_ref(void)'
+  c:\program files\tdt4102\graph_lib\graph\gui.h(114): note: see reference to function template instantiation 'Graph_lib::Vector_ref<Graph_lib::Button>::~Vector_ref(void)' being compiled
+  Generating code
+  All 648 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Oving2.vcxproj -> C:\Users\Marcus\Documents\Git\School\19Var\TDT4102\VSProj\Oving2\x64\Release\Oving2.exe

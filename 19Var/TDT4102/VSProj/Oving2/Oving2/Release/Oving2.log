@@ -1,0 +1,21 @@
+﻿  main.cpp
+c:\users\marcus\documents\git\school\19var\tdt4102\vsproj\oving2\oving2\main.cpp(113): warning C4309: 'initializing': truncation of constant value
+c:\users\marcus\documents\git\school\19var\tdt4102\vsproj\oving2\oving2\main.cpp(114): warning C4309: 'initializing': truncation of constant value
+c:\users\marcus\documents\git\school\19var\tdt4102\vsproj\oving2\oving2\main.cpp(115): warning C4309: 'initializing': truncation of constant value
+c:\users\marcus\documents\git\school\19var\tdt4102\vsproj\oving2\oving2\main.cpp(206): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+c:\users\marcus\documents\git\school\19var\tdt4102\vsproj\oving2\oving2\main.cpp(207): warning C4244: '-=': conversion from 'double' to 'int', possible loss of data
+c:\users\marcus\documents\git\school\19var\tdt4102\vsproj\oving2\oving2\main.cpp(217): warning C4244: 'argument': conversion from 'double' to 'const T', possible loss of data
+          with
+          [
+              T=int
+          ]
+  Generating code
+  108 of 200 functions (54.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    31 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Oving2.vcxproj -> C:\Users\Marcus\Documents\Git\School\19Var\TDT4102\VSProj\Oving2\Release\Oving2.exe
