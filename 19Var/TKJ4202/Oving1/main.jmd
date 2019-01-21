@@ -40,7 +40,7 @@ Indre energi er et mål på energien i et system som er tilgjengelig til å utf�
 include("oppg2A.jl")
 ```
 
-input(Oppg2.tex)
+input(Oppg2g.tex)
 
 # Oppgave 3
 
