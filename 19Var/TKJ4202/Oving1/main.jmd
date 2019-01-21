@@ -1,0 +1,53 @@
+---
+title: Øving 1
+author: Marcus Lexander
+---
+
+# Oppgave 1
+
+## 1
+
+### a)
+Et lukket system er et system hvor det ikke utveksles masse med omgivelsene, men det kan utveksles energi.
+
+### b)
+Et åpent system er et system hvor både masse og energi kan utveksles med omgivelsene.
+
+### c)
+Et isolert system er et system hvor verken masse eller energi kan utveksles med omgivelsene.
+
+### d)
+I en isokor prosess er volumet konstant.
+
+### e)
+I en isobar prosess er trykket konstant.
+
+### f)
+I en isoterm prosess er temperaturen konstant.
+
+### g)
+I en adiabatisk prosess utføres kun arbeid og ingen varme (men temperaturen kan endres).
+
+## 2
+Indre energi er et mål på energien i et system som er tilgjengelig til å utføre arbeid eller varme hvor endring i indre energi er definert som $\Delta U = q + w$ hvor q er utført varme på systemet og w er utført arbeid på systemet. Entalpi er denne energien pluss energien lagret i trykkpotensialet i systemet, dvs trykk ganget med volum. Entalp er da definert som $H = U + P V$.
+
+
+# Oppgave 2
+
+## a)
+
+```julia; echo = false
+include("oppg2A.jl")
+```
+
+input(Oppg2.tex)
+
+# Oppgave 3
+
+## a)
+
+```julia; echo = false
+include("oppg3A.jl")
+```
+
+input(Oppg3.tex)
