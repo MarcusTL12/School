@@ -1,0 +1,59 @@
+\begin{center}
+	\LARGE{\textbf{Øving 2}}
+\end{center}
+
+
+\section*{Oppgave 1}
+
+\subsection*{a)}
+
+En tilstandsligning/tilstandsfunksjon er er en størrelse som er utelukkende bestemt av et systems nåværende tilstand og ikke avhengig av hvordan det endte opp der. Indre energi er et eksempel på en tilsdandsfunksjon, da den bare avhenger av hvor mye energi det er i systemet. Arbeidet brukt for å oppnå denne indre energien er ikke en tilsdandsfunksjon da det avhenger av hvilke prosesser som førte til nåværende tilstand.
+
+
+\subsection*{b)}
+
+Det kritiske punktet for et stoff er et spesifikt trykk, volum og temperatur hvor egenskapene til gass- og væskefasene til stoffet endres slik at de oppfører seg ganske likt. Ved trykk og temperatur over det kritiske punktet er stoffet en superkritisk fluid hvor gass og væske ikke kan eksistere som to distinkte faser, men heller være løst opp i hverandre. Denne fluiden har mange egenskaper fra både gass og væske som blant annet kompressibilitet og det å kunne løse opp stoffer.
+
+
+\subsection*{c)}
+
+En reell gass er en gass som ikke nødvendigvis følger den ideelle gassloven og kan oppleve effekter som I.G. ikke tar hensyn til som repulsive og tiltrekkende krefter innad i gassen.
+
+
+\newpage
+
+
+\section*{Oppgave 2}
+
+\subsection*{1.}
+
+Van der Waals tilstandsligning:
+\begin{gather*}
+	\left(P + a \frac{n^2}{V^2}\right)\left(V - n b\right) = n R T
+	\\
+	\left(P + a \frac{1}{V_m^2}\right)\left(V_m - b\right) = R T
+\end{gather*}
+
+a-konstanten representerer kreftene mellom gasspartiklene, hvor en positiv a gir en økning i trykk som representerer en frastøtende kraft, og negativ a gir lavere trykk som representerer tiltrekkende kraft.
+b-konstanten representerer volumet partiklene opptar og gir en følgende økning i volum.
+
+\subsection*{2.}
+
+Ved temperatur under den kritiske temperaturen eksisterer trykk hvor det er en blanding av væske og gass i seperate faser, hvor ved høyere trykk enn dette har en kun væske, og lavere trykk har en kun gass. Ved temperatur over denne vil det aldri kunne eksistere både væske og gass som seperate faser, men heller som en superkritisk fluid.
+
+\newpage
+
+Plot incoming:
+
+<<echo=true>>=
+using Plots
+using SymPy
+
+R = 8.3145
+
+a = 1
+b = 1
+
+
+plot(cos.(11x), sin.(13x); framestyle = :zerolines)
+@

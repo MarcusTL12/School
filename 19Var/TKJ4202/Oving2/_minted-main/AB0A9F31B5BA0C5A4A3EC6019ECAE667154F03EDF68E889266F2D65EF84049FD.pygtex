@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{using} \PYG{n}{Plots}
+\PYG{k}{using} \PYG{n}{SymPy}
+
+\PYG{n}{x} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{n+nb}{pi} \PYG{o}{:} \PYG{l+m+mf}{0.01} \PYG{o}{:} \PYG{n+nb}{pi}
+
+\PYG{n}{plot}\PYG{p}{(}\PYG{n}{cos}\PYG{o}{.}\PYG{p}{(}\PYG{l+m+mi}{7}\PYG{n}{x}\PYG{p}{),} \PYG{n}{sin}\PYG{o}{.}\PYG{p}{(}\PYG{l+m+mi}{11}\PYG{n}{x}\PYG{p}{);} \PYG{n}{framestyle} \PYG{o}{=} \PYG{o}{:}\PYG{n}{zerolines}\PYG{p}{)}
+\end{Verbatim}

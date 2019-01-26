@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[margin=1.3in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{chemfig, amssymb, gensymb, marvosym, textcomp}
+\usepackage{amsmath}
+\setangleincrement{1}
+\setatomsep{2em}
+\setbondstyle{line width = 0.9pt}
+\setlength{\parindent}{0pt}
+
+\title{}
+\author{}
+\date{}
+
+\definesubmol{Ph}{*6(-=-=-=)}
+\definesubmol{iprop}{(-[::60])-[::-60]}
+\definesubmol{tbut}{(-[::60])(-[::-60])-[::0]}
+
+\newcommand{\posup}{\chemabove{}{\scriptstyle\oplus}}
+\newcommand{\posdown}{\chembelow{}{\scriptstyle\oplus}}
+\newcommand{\negup}{\chemabove{}{\scriptstyle\ominus}}
+\newcommand{\negdown}{\chembelow{}{\scriptstyle\ominus}}
+\newcommand{\chpos}{\scriptstyle\oplus}
+\newcommand{\chneg}{\scriptstyle\ominus}
+\newcommand{\posabove}[1]{\chemabove{#1}{\chpos}}
+\newcommand{\posbelow}[1]{\chembelow{#1}{\chpos}}
+\newcommand{\negabove}[1]{\chemabove{#1}{\chneg}}
+\newcommand{\negbelow}[1]{\chembelow{#1}{\chneg}}
+
+\newcommand{\chnegS}[1]{\chemabove{#1}{\quad\chneg}}
+\newcommand{\chposS}[1]{\chemabove{#1}{\quad\chpos}}
+
+\newcommand{\ep}[3]{\draw[shorten <=3, shorten >=3](#1_B)..controls +(#2 mm)and+(#3 mm)..(#1_T);}
+\newcommand{\epMod}[5]{\draw[shorten <=#4, shorten >=#5](#1_B)..controls +(#2 mm)and+(#3 mm)..(#1_T);}
+
+\newcommand{\biggerskip}{\bigskip\bigskip\bigskip\bigskip}
+
+\author{Marcus Takvam Lexander, BKJ. 4. semester}
+
+\begin{document}
+
+\input{Dokumenter/oppg.tex}
+
+\end{document}

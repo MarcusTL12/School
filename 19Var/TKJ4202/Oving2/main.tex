@@ -1,0 +1,31 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{mathtools,amssymb,amsmath,graphicx,lastpage,fancyhdr,tabu,pstricks}
+\usepackage{minted,fontspec,listings,polyglossia,newunicodechar}
+\setdefaultlanguage{norsk}
+
+\newfontfamily{\fbtwo}{Times New Roman}
+\DeclareTextFontCommand{\tfbtwo}{\fbtwo}
+
+\newfontfamily{\fbone}{Consolas}
+\DeclareTextFontCommand{\tfbone}{\fbone}
+
+\setlength{\parindent}{0pt}
+
+% \newcommand{\partDiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\partDiff}[3]{\frac{\partial^{#3} #1}{\partial #2^{#3}}}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\paranth}[1]{\left( #1 \right)}
+\newcommand{\bracket}[1]{\left[ #1 \right]}
+\newcommand{\laplace}[1]{\mathcal{L}\paranth{#1}}
+\newcommand{\invlaplace}[1]{\mathcal{L}^{-1}\paranth{#1}}
+\newcommand{\fourier}[1]{\mathscr{F}\paranth{#1}}
+\newcommand{\evalat}[2]{\left.#1\right|_{#2}}
+% \newcommand{\lim}[2]{\underset{\scalebox{0.8}{#1}}{\text{lim}} #2}
+
+\author{Marcus T. Lexander}
+
+\begin{document}
+
+\input{Dokumenter/oppg.tex}
+
+\end{document}
