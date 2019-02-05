@@ -18,7 +18,7 @@ double posX(double initPosition, double initVelocity, double time)
 
 double posY(double initPosition, double initVelocity, double time)
 {
-	return initPosition + initVelocity * time;
+	return initPosition + initVelocity * time + acclY() * time * time / 2;
 }
 
 void printTime(double time)

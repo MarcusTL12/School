@@ -1,0 +1,196 @@
+\begin{center}
+	\LARGE{\textbf{Øving 2}}
+\end{center}
+
+
+\section*{Oppgave 1}
+
+\subsection*{1}
+
+\subsubsection*{a)}
+
+Entropi er et ekstensivt mål på uorden. Den statistiske definisjonen på entropi er knyttet til antall mikrotilstander som tilsvarer makrotilstanden til systemet. Det gir da et mål på sannsyneligheten av en gitt tilstand. Det er for eksempel mindre sannsynelig at alle partiklene i en gass befinner seg i samme halvdel av beholderen enn om de er jevnt fordelt utover. Dersom gassen er i ene halvdelen av beholderen kan en utvinne arbeid fra systemet ved å la det ekspandere til en tilstand av høyere entropi. Endring i entropi er altså knyttet til flyt av energi. Den termodynamiske definisjonen på endring i entropi er forholdet på tilført varme og temperatur \((\Delta S = \frac{q_{rev}}{T})\).
+
+
+\subsubsection*{b)}
+
+Termodynamikkens andre lov sier at et isolert systems totale entropi vil aldri gå nedover, dvs. er alltid konstant eller økende.
+
+
+\subsubsection*{c)}
+
+Termodynamikkens tredje lov sier at når temperatur går mot absolutt 0 går absolutt entropi mot 0.
+
+
+\subsubsection*{d)}
+
+Virkningsgrad er et mål på hvor stor andel tilført energi kan utvinnes som arbeid.
+
+
+\subsubsection*{e)}
+
+En carnot syklus er en ideell firetegs prosess for å omgjøre varme til arbeid. Den Består av en isoterm ekspansjon, en adiabatisk avkjøling, isoterm kompresjon og adiabatisk oppvarming.
+
+
+\subsection*{2.}
+
+En irreversibel prosess er en prosess som ikke kan reverseres ved infinitesimale endringer, for eksempel i termisk eller mekanisk likevekt. I en reversibel prosess er total entropi uendret, mens i en irreversibel prosess øker total entropi.
+
+
+\subsection*{3.}
+
+Ideelle gasser vil blande seg da perfekt sepererte gasser er i en lavere entropi tilstand (tilsvarende å ha all gassen i ene halvparten av en beholder) og blandingsprosessen vil føre til en høyere entropi tilstand noe som vil skje spontant.
+
+
+\section*{Oppgave 2}
+
+\subsection*{1.}
+
+For en irreversibel prosess er endring i total entropi positiv, og siden prosessen er adiabatisk skjer det ingen varmeutveksling med omgivelsene som gjør omgivelsenes entropiendring til 0. Da er eneste stedet entropiendringen kan skje i systemet.
+
+\subsection*{2.}
+
+\(\Delta U = q + w = w\) for adiabatiske prosesser. \(w\) her er utført på systemet som er motsatt fra den oppgitte verdien og \(\Delta U\) blir derfor -1197 J.
+\\
+\\
+For entropiendringen kan vi dele prosessen opp i to reversible prosesser som er enklere å regne på. Dette er mulig da entropi er en tilstandsfunksjon. Oppdelingen kan for eksempel være en isokor nedkjøling til rett trykk og så en isobar ekspansjon til rett volum.
+\\
+\\
+Trinn 1 (Isokor):
+\begin{gather*}
+	PV = nRT
+	\Rightarrow
+	\frac{T_1}{P_1} = \frac{T_2}{P_2}
+	\Rightarrow
+	T_2 = \frac{P_2}{P_1} T_1
+	=
+	\frac{2\ \text{atm}}{10\ \text{atm}} \cdot 300\ \text{K} = 60\ \text{K}
+	\\
+	\\
+	\Delta S = C_V \ln{\frac{T_2}{T_1}} =
+	12.47\ \text{J K}^{-1} \text{mol}^{-1} \cdot \ln{\frac{60}{300}} =
+	-20.07\ \text{J K}^{-1}
+\end{gather*}
+
+Trinn 2 (Isobar):
+\begin{gather*}
+	w = R (T_2 - T_3) =
+	- 1197 J = 8.3145\ \text{J K}^{-1} \text{mol}^{-1} (60 K - T_3)
+	\\
+	T_3 = 204.0 K
+	\\
+	\\
+	\Delta S = C_P \ln{\frac{T_3}{T_2}} =
+	\frac{5}{3} \cdot C_V \ln{\frac{T_3}{T_2}} =
+	\frac{5}{3} \cdot 12.47\ \text{J K}^{-1} \text{mol}^{-1} \cdot
+	\ln{\frac{204}{60}} = 24.43\ \text{J K}^{-1}
+\end{gather*}
+\\
+Total \(\Delta S\) er da \(-20.07\ \text{J K}^{-1} + 25.43\ \text{J K}^{-1} = 5.36\ \text{J K}^{-1}\)
+
+\subsection*{3.}
+
+Var veldig greit å regne ut med å bruke oppgit w, men ser ikke helt hvor jeg kan finne den uten det så gleder meg til å se LF.
+
+
+\section*{Oppgave 3}
+
+\subsection*{1.}
+
+\begin{gather*}
+	\Delta S = n R \ln{\frac{V_2}{V_1}} =
+	1\ \text{mol} 8.3145 \ \text{J K}^{-1} \text{mol}^{-1} \cdot
+	\ln{\frac{0.1}{0.01}} = 19.14\ \text{J K}^{-1}
+\end{gather*}
+
+
+\subsection*{2.}
+
+\begin{gather*}
+	\Delta U = w + q = 0 \Rightarrow q = -w
+	\\
+	w = \Delta (PV) = \cancel{\Delta P V} + P \Delta V =
+	24\ \text{kPa} \cdot (0.100 - 0.0100) \text{m}^3 = 2.16 \text{kJ}
+	\\
+	q = - w = -2.16 \text{kJ}
+	\\
+	\Delta S = \frac{q}{T} = - \frac{2.16\ \text{kJ}}{298\ \text{K}} =
+	-7.248\ \text{J K}^{-1}
+\end{gather*}
+
+
+\subsection*{3.}
+
+Endring i indre entropi i systemet vil være det samme i begge tilfellene siden entropi er en tilstandsfunksjon. Total endring i entropi blir da bare summen av indre og ytre \(= 19.14\ \text{J K}^{-1} - 7.25\ \text{J K}^{-1} = 11.89\ \text{J K}^{-1}\)
+
+
+\section*{Oppgave 4}
+
+\subsection*{1.}
+
+Carnot-maskinen er en ideel maskin som transformerer varme om til arbeid. Den bruker varmestrømning fra et varmt reservoar til et kaldt reservoar til å gjøre noe av varmen om til arbeid ved carnot sykler.
+
+
+\subsection*{2.}
+
+Trinn 1 (Isoterm ekspansjon): \(w = -q = R T_h \ln{\frac{P_B}{P_A}}\)
+\\
+Trinn 2 (Adiabatisk nedkjøling): \(w = C_v (T_c - T_h),\quad q = 0\)
+\\
+Trinn 3 (Isoterm kompresjon): \(w = -q = R T_l \ln{\frac{P_D}{P_C}}\)
+\\
+Trinn 4 (Adiabatisk oppvarming): \(w = - C_v (T_c - T_h),\quad q = 0\)
+\\
+\\
+For reversible adiabatiske prosesser:
+\begin{gather*}
+	V_A T_H = V_D T_C
+	\wedge
+	V_B T_H = V_C T_C
+	\\
+	\frac{V_A}{V_D} = \frac{T_c}{T_h} = \frac{V_B}{V_C} \Rightarrow
+	\frac{V_A}{V_B} = \frac{V_D}{V_C}
+	\\
+	\\
+	P_A V_A = n R T_h = P_B V_B
+	\\
+	\frac{P_A}{P_B} = \frac{V_B}{V_A}
+	\Rightarrow
+	\frac{V_A}{V_B} = \frac{V_D}{V_C} = \frac{P_B}{P_A}
+	\\
+	\\
+	w_{tot} = R T_h \ln{\frac{P_B}{P_A}} + R T_l \ln{\frac{P_D}{P_C}} +
+	\cancel{C_v (T_c - T_h) - C_v (T_c - T_h)} =
+	\\
+	R T_h \ln{\frac{P_B}{P_A}} - R T_l \ln{\frac{P_B}{P_A}} =
+	R \ln{\frac{P_B}{P_A}} (T_h - T_l)
+	\\
+	\\
+	q_h = R T_h \ln{\frac{P_A}{P_B}}
+	\\
+	\eta = \frac{|w|}{q_h} =
+	\frac{R \ln{\frac{P_A}{P_B}} (T_h - T_l)}{R T_h \ln{\frac{P_A}{P_B}}} =
+	\frac{T_h - T_l}{T_h} = 1 - \frac{T_c}{T_h}\quad \blacksquare
+\end{gather*}
+
+
+\subsection*{3.}
+
+\begin{gather*}
+	C_{\chemfig{H_2O}} = 4.184 \frac{\text{MJ}}{\text{Km}^3}
+	\\
+	\eta = 0.6
+	\\
+	q_h \cdot 0.6 = 1000 \text{MW}
+	\\
+	q_h = \frac{1000 \text{MW}}{0.6} = 1667 \text{MW}
+	\\
+	q_c = q_h - 1000 \text{MW} = 667 \text{MW}
+	\\
+	\Delta T = \frac{q_c}{C \cdot V} =
+	\frac{667 \frac{\text{MJ}}{\text{s}}}
+	{4.184 \frac{\text{MJ}}{\text{Km}^3} \cdot 400 \frac{\text{m}^3}{s}} =
+	0.40 K
+\end{gather*}
+
+Ser jeg ikke får helt samme svar som fasiten her så har sikkert misforstått hvordan jeg skulle bruke virkningsgraden siden det er i samme størrelsesorden som fasiten.
